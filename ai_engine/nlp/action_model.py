@@ -166,8 +166,9 @@ class ActionModelLoader:
         for target_model in candidate_models:
             # 1. Try official google.genai SDK
             try:
-                from google import genai
-                from google.genai import types
+                from google import genai  # type: ignore
+                from google.genai import types  # type: ignore
+
 
                 client = genai.Client(api_key=GEMINI_API_KEY)
                 config = types.GenerateContentConfig(
