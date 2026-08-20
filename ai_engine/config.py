@@ -66,26 +66,27 @@ torch.set_num_threads(NUM_CORES)
 os.environ["OMP_NUM_THREADS"] = str(NUM_CORES)
 os.environ["MKL_NUM_THREADS"] = str(NUM_CORES)
 
-# ── Whisper: Automatically upgrade model & use GPU when CUDA is available ──
-# ── Whisper & NLP Device Settings ──
-# ── Whisper & NLP Device Settings ──
+# ── Hybrid Architecture Device Settings ──
+# Whisper runs on CPU (INT8 quantization, multi-threaded): 0 MB GPU VRAM used.
+# NLP Engine runs on GPU (CUDA): Full 15 GB GPU VRAM dedicated to high-level NLP models.
+WHISPER_DEVICE = "cpu"
+WHISPER_COMPUTE_TYPE = "int8"
+WHISPER_MODEL = "small"   # High accuracy small model running multi-threaded on CPU
+
 if torch.cuda.is_available():
     DEVICE = "cuda"
     TORCH_DTYPE = torch.float16
     HF_DEVICE = 0
-    WHISPER_DEVICE = "cuda"
-    WHISPER_COMPUTE_TYPE = "int8_float16"   # INT8/FP16 hybrid mode: uses only 1.5GB VRAM on GPU!
-    WHISPER_MODEL = "medium"                # High-accuracy medium model (fast, zero OOM risk)
+    ACTION_MODEL = "Qwen/Qwen2.5-3B-Instruct"  # Powerful 3B model dedicated to GPU!
     gpu_name = torch.cuda.get_device_name(0)
-    EXEC_MODE_STR = f"Hybrid Mode [Whisper=GPU ({WHISPER_MODEL}) | NLP Engine=Llama 3.3 70B | GPU={gpu_name}]"
+    EXEC_MODE_STR = f"Hybrid Architecture [Whisper=CPU (small INT8) | NLP Engine=Qwen 2.5 3B | GPU={gpu_name}]"
 else:
     DEVICE = "cpu"
     TORCH_DTYPE = torch.float32
     HF_DEVICE = -1
-    WHISPER_DEVICE = "cpu"
-    WHISPER_COMPUTE_TYPE = "int8"       # INT8 quantization: fastest CPU inference
-    WHISPER_MODEL = "base"
-    EXEC_MODE_STR = "Hybrid Mode [Whisper=CPU (base) | NLP Engine=Llama 3.3 70B | Local CPU]"
+    ACTION_MODEL = "Qwen/Qwen2.5-0.5B-Instruct"
+    EXEC_MODE_STR = "Hybrid Architecture [Whisper=CPU (base INT8) | Local CPU]"
+
 
 
 
