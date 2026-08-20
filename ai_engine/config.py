@@ -68,13 +68,14 @@ os.environ["MKL_NUM_THREADS"] = str(NUM_CORES)
 
 # ── Whisper: Automatically upgrade model & use GPU when CUDA is available ──
 # ── Whisper & NLP Device Settings ──
+# ── Whisper & NLP Device Settings ──
 if torch.cuda.is_available():
     DEVICE = "cuda"
     TORCH_DTYPE = torch.float16
     HF_DEVICE = 0
     WHISPER_DEVICE = "cuda"
-    WHISPER_COMPUTE_TYPE = "float16"
-    WHISPER_MODEL = "large-v3"       # High-accuracy state-of-the-art model for Kaggle GPU!
+    WHISPER_COMPUTE_TYPE = "int8_float16"   # INT8/FP16 hybrid mode: uses only 1.5GB VRAM on GPU!
+    WHISPER_MODEL = "medium"                # High-accuracy medium model (fast, zero OOM risk)
     gpu_name = torch.cuda.get_device_name(0)
     EXEC_MODE_STR = f"Hybrid Mode [Whisper=GPU ({WHISPER_MODEL}) | NLP Engine=Llama 3.3 70B | GPU={gpu_name}]"
 else:
@@ -85,6 +86,7 @@ else:
     WHISPER_COMPUTE_TYPE = "int8"       # INT8 quantization: fastest CPU inference
     WHISPER_MODEL = "base"
     EXEC_MODE_STR = "Hybrid Mode [Whisper=CPU (base) | NLP Engine=Llama 3.3 70B | Local CPU]"
+
 
 
 
