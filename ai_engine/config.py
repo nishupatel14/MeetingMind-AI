@@ -73,10 +73,11 @@ if torch.cuda.is_available():
     HF_DEVICE = 0
     WHISPER_DEVICE = "cuda:1"
     WHISPER_COMPUTE_TYPE = "float16"
-    WHISPER_MODEL = "small"
+    WHISPER_MODEL = "large-v3-turbo"
     ACTION_MODEL = "Qwen/Qwen2.5-3B-Instruct"
     gpu_name = torch.cuda.get_device_name(0)
     EXEC_MODE_STR = f"Hybrid Architecture [Whisper=GPU ({WHISPER_MODEL} {WHISPER_DEVICE}) | NLP Engine=Qwen 2.5 3B | GPU={gpu_name}]"
+
 else:
     WHISPER_DEVICE = "cpu"
     WHISPER_COMPUTE_TYPE = "int8"

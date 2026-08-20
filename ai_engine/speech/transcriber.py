@@ -55,7 +55,7 @@ class MeetingTranscriber:
             segments, info = self.model.transcribe(
                 audio_path,
                 language="en",
-                beam_size=5,
+                beam_size=1,
                 vad_filter=True,           # Skip silent segments automatically
                 vad_parameters={
                     "min_silence_duration_ms": 500,
