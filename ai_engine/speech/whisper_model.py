@@ -24,28 +24,46 @@ class WhisperLoader:
 
     @classmethod
     def get_model(cls):
-        """Load and cache the faster-whisper model (CPU, INT8)."""
+        """Load and cache the faster-whisper model (CPU or GPU)."""
         if cls._model is None:
+            import torch
+
+            # Determine correct device
+            if WHISPER_DEVICE == "cuda":
+                if torch.cuda.is_available():
+                    try:
+                        torch.cuda.set_device(0)  # Ensure device 0
+                    except Exception:
+                        pass
+                    device = "cuda:0"  # Explicit device:0
+                else:
+                    device = "cpu"
+            else:
+                device = "cpu"
+
             print(f"[WhisperLoader] Engine  : faster-whisper (CTranslate2)")
             print(f"[WhisperLoader] Model   : {WHISPER_MODEL}")
-            print(f"[WhisperLoader] Device  : {WHISPER_DEVICE.upper()}")
+            print(f"[WhisperLoader] Device  : {device.upper()}")
             print(f"[WhisperLoader] Compute : {WHISPER_COMPUTE_TYPE}")
             print(f"[WhisperLoader] Threads : {NUM_CORES} CPU cores")
 
-            device_idx = 0 if WHISPER_DEVICE == "cuda" else 0
             try:
                 cls._model = WhisperModel(
                     WHISPER_MODEL,
-                    device=WHISPER_DEVICE,
-                    device_index=device_idx,
+                    device=device,  # Use explicit "cuda:0" or "cpu"
                     compute_type=WHISPER_COMPUTE_TYPE,
                     cpu_threads=NUM_CORES,
                     download_root="./models",
                 )
-                cls._device_used = WHISPER_DEVICE
-                print(f"[WhisperLoader] Loaded faster-whisper successfully on {WHISPER_DEVICE.upper()} (Device {device_idx})")
+                cls._device_used = device
+                print(f"[WhisperLoader] ✓ Loaded faster-whisper successfully on {device.upper()}")
             except Exception as err:
-                print(f"[WhisperLoader] Warning: GPU Whisper init failed ({err}). Falling back to CPU...")
+                print(f"[WhisperLoader] ⚠ Warning: {device.upper()} failed ({err}). Falling back to CPU...")
+                if torch.cuda.is_available():
+                    try:
+                        torch.cuda.empty_cache()
+                    except Exception:
+                        pass
                 cls._model = WhisperModel(
                     "base",
                     device="cpu",
@@ -54,8 +72,7 @@ class WhisperLoader:
                     download_root="./models",
                 )
                 cls._device_used = "cpu"
-                print("[WhisperLoader] Loaded faster-whisper successfully on CPU fallback")
-
+                print("[WhisperLoader] ✓ Loaded faster-whisper successfully on CPU fallback")
 
         return cls._model
 
