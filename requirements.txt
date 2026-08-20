@@ -2,6 +2,7 @@ flask
 faster-whisper
 torch
 transformers
+huggingface_hub
 av
 reportlab
 colorlog
@@ -9,3 +10,4 @@ colorlog
 
 # step 1 - .\.venv\Scripts\Activate.ps1
 # step 2 - python app.py
+
