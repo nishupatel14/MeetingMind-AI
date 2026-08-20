@@ -67,25 +67,26 @@ os.environ["OMP_NUM_THREADS"] = str(NUM_CORES)
 os.environ["MKL_NUM_THREADS"] = str(NUM_CORES)
 
 # ── Hybrid Architecture Device Settings ──
-# Whisper runs on CPU (INT8 quantization, multi-threaded): 0 MB GPU VRAM used.
-# NLP Engine runs on GPU (CUDA): Full 15 GB GPU VRAM dedicated to high-level NLP models.
-WHISPER_DEVICE = "cpu"
-WHISPER_COMPUTE_TYPE = "int8"
-WHISPER_MODEL = "small"   # High accuracy small model running multi-threaded on CPU
-
 if torch.cuda.is_available():
     DEVICE = "cuda"
     TORCH_DTYPE = torch.float16
     HF_DEVICE = 0
-    ACTION_MODEL = "Qwen/Qwen2.5-3B-Instruct"  # Powerful 3B model dedicated to GPU!
+    WHISPER_DEVICE = "cuda:1"
+    WHISPER_COMPUTE_TYPE = "float16"
+    WHISPER_MODEL = "small"
+    ACTION_MODEL = "Qwen/Qwen2.5-3B-Instruct"
     gpu_name = torch.cuda.get_device_name(0)
-    EXEC_MODE_STR = f"Hybrid Architecture [Whisper=CPU (small INT8) | NLP Engine=Qwen 2.5 3B | GPU={gpu_name}]"
+    EXEC_MODE_STR = f"Hybrid Architecture [Whisper=GPU ({WHISPER_MODEL} {WHISPER_DEVICE}) | NLP Engine=Qwen 2.5 3B | GPU={gpu_name}]"
 else:
+    WHISPER_DEVICE = "cpu"
+    WHISPER_COMPUTE_TYPE = "int8"
+    WHISPER_MODEL = "small"
     DEVICE = "cpu"
     TORCH_DTYPE = torch.float32
     HF_DEVICE = -1
     ACTION_MODEL = "Qwen/Qwen2.5-0.5B-Instruct"
-    EXEC_MODE_STR = "Hybrid Architecture [Whisper=CPU (base INT8) | Local CPU]"
+    EXEC_MODE_STR = "Hybrid Architecture [Whisper=CPU (small INT8) | Local CPU]"
+
 
 
 
