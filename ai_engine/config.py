@@ -66,29 +66,27 @@ torch.set_num_threads(NUM_CORES)
 os.environ["OMP_NUM_THREADS"] = str(NUM_CORES)
 os.environ["MKL_NUM_THREADS"] = str(NUM_CORES)
 
-# ── Whisper: runs on CPU (faster-whisper with INT8 quantization) ──
-WHISPER_DEVICE = "cpu"
-WHISPER_COMPUTE_TYPE = "int8"       # INT8 quantization: fastest CPU inference
-
-# ── NLP fallback local model: GPU if available, otherwise CPU ──
+# ── Whisper: Automatically upgrade model & use GPU when CUDA is available ──
+# ── Whisper & NLP Device Settings ──
 if torch.cuda.is_available():
     DEVICE = "cuda"
     TORCH_DTYPE = torch.float16
     HF_DEVICE = 0
+    WHISPER_DEVICE = "cuda"
+    WHISPER_COMPUTE_TYPE = "float16"
+    WHISPER_MODEL = "large-v3"       # High-accuracy state-of-the-art model for Kaggle GPU!
     gpu_name = torch.cuda.get_device_name(0)
-    EXEC_MODE_STR = f"Hybrid Mode [Whisper=CPU | NLP Engine=Llama 3.3 70B | GPU={gpu_name}]"
+    EXEC_MODE_STR = f"Hybrid Mode [Whisper=GPU ({WHISPER_MODEL}) | NLP Engine=Llama 3.3 70B | GPU={gpu_name}]"
 else:
     DEVICE = "cpu"
     TORCH_DTYPE = torch.float32
     HF_DEVICE = -1
-    EXEC_MODE_STR = "Hybrid Mode [Whisper=CPU | NLP Engine=Llama 3.3 70B | Local CPU]"
+    WHISPER_DEVICE = "cpu"
+    WHISPER_COMPUTE_TYPE = "int8"       # INT8 quantization: fastest CPU inference
+    WHISPER_MODEL = "base"
+    EXEC_MODE_STR = "Hybrid Mode [Whisper=CPU (base) | NLP Engine=Llama 3.3 70B | Local CPU]"
 
 
-# ==========================
-# Whisper Settings
-# ==========================
-
-WHISPER_MODEL = "base"
 
 # ==========================
 # NLP Engine Model Settings
