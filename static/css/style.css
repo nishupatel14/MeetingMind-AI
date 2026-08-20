@@ -1,0 +1,255 @@
+*{
+
+margin:0;
+padding:0;
+box-sizing:border-box;
+
+}
+
+body{
+
+font-family:Arial,Helvetica,sans-serif;
+
+background:linear-gradient(135deg,#0f172a,#1e3a8a);
+
+height:100vh;
+
+display:flex;
+
+justify-content:center;
+
+align-items:center;
+
+}
+
+.main-container{
+
+width:100%;
+
+display:flex;
+
+justify-content:center;
+
+align-items:center;
+
+}
+
+.card{
+
+background:white;
+
+width:700px;
+
+padding:45px;
+
+border-radius:20px;
+
+box-shadow:0 20px 60px rgba(0,0,0,.35);
+
+text-align:center;
+
+}
+
+h1{
+
+font-size:42px;
+
+margin-bottom:15px;
+
+color:#1e3a8a;
+
+}
+
+.subtitle{
+
+font-size:18px;
+
+color:#666;
+
+margin-bottom:35px;
+
+line-height:1.7;
+
+}
+
+input[type=file]{
+
+width:100%;
+
+padding:20px;
+
+border:2px dashed #2563eb;
+
+border-radius:15px;
+
+background:#f8fbff;
+
+margin-bottom:30px;
+
+cursor:pointer;
+
+}
+
+button{
+
+width:100%;
+
+padding:18px;
+
+border:none;
+
+border-radius:12px;
+
+font-size:20px;
+
+font-weight:bold;
+
+background:#2563eb;
+
+color:white;
+
+cursor:pointer;
+
+transition:.3s;
+
+}
+
+button:hover{
+
+background:#1d4ed8;
+
+transform:scale(1.02);
+
+}
+
+.loader{
+
+display:none;
+
+margin-top:35px;
+
+}
+
+.spinner{
+
+width:60px;
+
+height:60px;
+
+border:7px solid #ddd;
+
+border-top:7px solid #2563eb;
+
+border-radius:50%;
+
+margin:auto;
+
+animation:spin 1s linear infinite;
+
+}
+
+@keyframes spin{
+
+100%{
+
+transform:rotate(360deg);
+
+}
+
+}
+
+.success{
+
+margin-top:30px;
+
+background:#dcfce7;
+
+padding:15px;
+
+border-radius:10px;
+
+color:#166534;
+
+font-size:20px;
+
+font-weight:bold;
+
+}
+
+.error{
+
+margin-top:30px;
+
+background:#fee2e2;
+
+padding:15px;
+
+border-radius:10px;
+
+color:#991b1b;
+
+font-size:20px;
+
+font-weight:bold;
+
+}
+pre{
+
+    white-space:pre-wrap;
+
+    text-align:left;
+
+    background:#f8f8f8;
+
+    padding:20px;
+
+    border-radius:10px;
+
+    margin-top:15px;
+
+    overflow:auto;
+
+    font-size:15px;
+
+    line-height:1.6;
+
+}
+
+hr{
+
+    margin:35px 0;
+
+}
+
+.live-transcript{
+
+    margin-top:30px;
+    padding:20px;
+    border:1px solid #bfdbfe;
+    border-radius:12px;
+    background:#eff6ff;
+    text-align:left;
+
+}
+
+.live-transcript h2{
+
+    font-size:20px;
+    color:#1e3a8a;
+    margin-bottom:8px;
+
+}
+
+.live-transcript p{
+
+    color:#475569;
+    margin-bottom:10px;
+
+}
+
+.live-transcript pre{
+
+    max-height:260px;
+    overflow-y:auto;
+
+}

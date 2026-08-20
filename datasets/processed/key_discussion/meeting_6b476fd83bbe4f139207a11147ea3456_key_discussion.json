@@ -1,0 +1,32 @@
+[
+    {
+        "topic": "Sustainability in Supply Chain",
+        "points": [
+            {
+                "timestamp": "00:41",
+                "type": "Fact",
+                "text": "Companies periodically monitor their suppliers based on sustainability, questioning them on what help they require to establish themselves in the field of sustainability."
+            }
+        ]
+    },
+    {
+        "topic": "Environmental Regulations and Compliance",
+        "points": [
+            {
+                "timestamp": "03:17",
+                "type": "Fact",
+                "text": "The European Union drafted legislation requiring companies to disclose their emissions on a quarterly basis for products imported into the EU, with a cap to be set for each product based on emissions data from January 2026 to December 2026."
+            }
+        ]
+    },
+    {
+        "topic": "ESG and Cybersecurity",
+        "points": [
+            {
+                "timestamp": "02:37",
+                "type": "Opinion",
+                "text": "ESG compliance may lead to cybersecurity being a byproduct, as companies focus on being sustainable and compliant with regulations to receive government credits and market benefits."
+            }
+        ]
+    }
+]

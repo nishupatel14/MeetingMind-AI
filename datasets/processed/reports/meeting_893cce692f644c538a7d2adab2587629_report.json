@@ -1,0 +1,39 @@
+{
+    "report_information": {
+        "generated_by": "MeetingMind AI",
+        "version": "1.0",
+        "report_type": "Meeting Analysis Report"
+    },
+    "metadata": {
+        "meeting_id": "meeting_893cce692f644c538a7d2adab2587629",
+        "language": "English",
+        "word_count": 6577,
+        "sentence_count": 533,
+        "reading_time": "32.9 min",
+        "duration_minutes": "50.6 min"
+    },
+    "executive_summary": "========== EXECUTIVE SUMMARY ==========\n\nThe meeting focused on several critical aspects of the company's operations, including GTM teams' involvement in sponsoring events, platform improvements, core prevent team's track record, product announcements, feedback gathering, accessibility considerations, reusability, and future plans. Key discussions included the need for improved user experience, community contributions, and the importance of integrating various systems like CRM and Visual Studio Code extensions. The team was also discussing the creation of a messaging framework and the assignment of tasks related to GitLab messaging and security controls. Overall, the meeting aimed to enhance operational efficiency and ensure alignment across all departments.",
+    "discussion_topics": [
+        "Security and Control - We need to have a security one in there This one I went with end to end control over your software factory, not as pithy, but",
+        "Speed and Confidence - this one I hate, scale up speed up test up And you can't say with GitLab, you get move fast with confidence",
+        "Speed vs Risk - this one I hate, scale up speed up test up No, but you can't say more speedless risk",
+        "Speed and Risk Management - And vulnerability management was one of the features that we looked at in 14 for monitors with incident management, there were a bunch of things that we released",
+        "Speed and Confidence in Software Development - This one I went with end to end control over your software factory, not as pithy, but this one I hate, scale up speed up test up"
+    ],
+    "key_decisions": [
+        "• **Final Decision List:**",
+        "• **Manage is even less descriptive than that.**",
+        "• **The way this is getting built is off of a data model.**",
+        "• **We're separating like presentation layer from data layer.**",
+        "• **It's not going to be as hard to update in the future.**",
+        "• **We need to get it out of two.**"
+    ],
+    "action_items": [
+        "1.",
+        "Person:",
+        "Task:",
+        "Deadline:",
+        "**Person:** **Samuel**",
+        "**Task:** I appreciate, Brad, for adding this. I probably should add it, but. I had two questions about that one. One is, over what time frame are we looking at? So in theory, this could be the same as the Gilep 14 launch, where we're saying basically since 13.0, what kind of big improvements have we made. Candidly, this is always a little bit tough, and I am not totally sure of all of the kind of the interplay here"
+    ]
+}

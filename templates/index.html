@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>MeetingMind AI</title>
+
+<link
+rel="stylesheet"
+href="{{ url_for('static', filename='css/style.css') }}">
+
+</head>
+
+<body>
+
+<div class="main-container">
+
+<div class="card">
+
+<h1>🎙️ MeetingMind AI</h1>
+
+<p class="subtitle">
+Upload your meeting audio and let AI generate
+Summary • Topics • Decisions • Action Items
+</p>
+
+<input
+type="file"
+id="file"
+accept=".mp3,.wav,.m4a,.flac">
+
+<button
+id="analyzeBtn"
+onclick="uploadFile()">
+🚀 Analyze Meeting
+</button>
+
+<div id="loader" class="loader" style="display:none;">
+
+<div class="spinner"></div>
+
+<p>Analyzing meeting...</p>
+
+</div>
+
+<div id="liveTranscript" class="live-transcript" style="display:none;">
+
+<h2>Live Transcript</h2>
+
+<p id="transcriptMessage">Preparing audio...</p>
+
+<pre id="transcriptText">
+Your transcript will appear here as it is processed.
+</pre>
+
+</div>
+
+<div id="status"></div>
+
+</div>
+
+</div>
+
+<script>
+
+let transcriptPollingId = null;
+
+async function refreshTranscript(){
+
+    const response = await fetch("/transcription-status");
+
+    if(!response.ok){
+        return;
+    }
+
+    const data = await response.json();
+
+    document.getElementById("transcriptMessage").textContent = data.message;
+
+    const transcriptText = document.getElementById("transcriptText");
+
+    transcriptText.textContent =
+        data.text || "Your transcript will appear here as it is processed.";
+
+    transcriptText.scrollTop = transcriptText.scrollHeight;
+}
+
+function startTranscriptPolling(){
+
+    document.getElementById("liveTranscript").style.display = "block";
+
+    refreshTranscript();
+
+    transcriptPollingId = setInterval(refreshTranscript,1000);
+}
+
+function stopTranscriptPolling(){
+
+    if(transcriptPollingId !== null){
+
+        clearInterval(transcriptPollingId);
+
+        transcriptPollingId = null;
+    }
+
+    refreshTranscript();
+}
+
+async function uploadFile(){
+
+    const file = document.getElementById("file").files[0];
+
+    if(!file){
+
+        alert("Please select an audio file.");
+
+        return;
+    }
+
+    const loader = document.getElementById("loader");
+
+    const button = document.getElementById("analyzeBtn");
+
+    const status = document.getElementById("status");
+
+    loader.style.display = "block";
+
+    button.disabled = true;
+
+    button.innerHTML = "Processing...";
+
+    status.innerHTML = "";
+
+    startTranscriptPolling();
+
+    const formData = new FormData();
+
+    formData.append("file",file);
+
+    let result;
+
+    try{
+
+        const response = await fetch("/upload",{
+
+            method:"POST",
+
+            body:formData
+
+        });
+
+        result = await response.json();
+
+    }catch(error){
+
+        result = {
+
+            success:false,
+
+            message:"Upload failed. Please try again."
+
+        };
+
+    }
+
+    stopTranscriptPolling();
+
+    loader.style.display = "none";
+
+    button.disabled = false;
+
+    button.innerHTML = "🚀 Analyze Meeting";
+
+    if(!result.success){
+
+        status.innerHTML =
+        "<h2 style='color:red'>❌ " + result.message + "</h2>";
+
+        return;
+    }
+
+    // Redirect to result page
+
+    window.location.assign("/result/" + encodeURIComponent(result.report_id));
+}
+
+</script>
+
+</body>
+
+</html>

@@ -1,0 +1,2887 @@
+[
+    {
+        "start": 0.94,
+        "end": 6.86,
+        "text": "Okay, be it for banks, be it for healthcare, but I think this is most customized towards"
+    },
+    {
+        "start": 6.86,
+        "end": 7.86,
+        "text": "the banks."
+    },
+    {
+        "start": 7.86,
+        "end": 15.76,
+        "text": "We have consolidated requirements from the industries like SEBI, RBI, Fintech, Osprey,"
+    },
+    {
+        "start": 15.76,
+        "end": 22.66,
+        "text": "North America, and those are the main requirements which have been, so your banks are also reporting"
+    },
+    {
+        "start": 22.66,
+        "end": 24.82,
+        "text": "on all of those regulations."
+    },
+    {
+        "start": 24.82,
+        "end": 31.22,
+        "text": "What our team at CSRI's security umbrella has done is made few automated tools out of this"
+    },
+    {
+        "start": 31.22,
+        "end": 35.9,
+        "text": "integrated AI capabilities and have made mobile applications."
+    },
+    {
+        "start": 35.9,
+        "end": 43.02,
+        "text": "These mobile applications are going to be deployed on the iPads and tablets for now mostly"
+    },
+    {
+        "start": 43.02,
+        "end": 48.82,
+        "text": "thinking about the future of CSOs or CTOs who are going to be moving with this program in"
+    },
+    {
+        "start": 48.82,
+        "end": 49.82,
+        "text": "real time."
+    },
+    {
+        "start": 49.82,
+        "end": 55.36,
+        "text": "We also have the web version of this one, but however you would like to tell you that"
+    },
+    {
+        "start": 55.36,
+        "end": 62.22,
+        "text": "the web has been not recommended by many companies, but we will be able to customize it for"
+    },
+    {
+        "start": 62.22,
+        "end": 63.22,
+        "text": "you."
+    },
+    {
+        "start": 63.22,
+        "end": 66.46,
+        "text": "So that will be the next few weeks, you can get it."
+    },
+    {
+        "start": 66.46,
+        "end": 71.86,
+        "text": "Our team will be able to drop this tablet for you and then you will be able to have access"
+    },
+    {
+        "start": 71.86,
+        "end": 75.54,
+        "text": "to the access to the program features and applications."
+    },
+    {
+        "start": 75.54,
+        "end": 76.54,
+        "text": "So far so good."
+    },
+    {
+        "start": 76.54,
+        "end": 77.54,
+        "text": "Am I audible?"
+    },
+    {
+        "start": 77.54,
+        "end": 78.54,
+        "text": "Alisa, Thanochan, everybody?"
+    },
+    {
+        "start": 78.54,
+        "end": 79.54,
+        "text": "Yeah."
+    },
+    {
+        "start": 80.26,
+        "end": 81.26,
+        "text": "Okay."
+    },
+    {
+        "start": 81.26,
+        "end": 95.61,
+        "text": "Now, the first application, which is a lot popular with our clients right now, so this helps"
+    },
+    {
+        "start": 95.61,
+        "end": 98.89,
+        "text": "you understand the program, cybersecurity program."
+    },
+    {
+        "start": 98.89,
+        "end": 103.57,
+        "text": "You may have already a program going on, you may not have anything going on, it may be,"
+    },
+    {
+        "start": 103.57,
+        "end": 105.73,
+        "text": "but you can really adapt to it very quickly."
+    },
+    {
+        "start": 105.73,
+        "end": 111.05,
+        "text": "There are logins to this one, which there are three logins to this one, admin, a CISO login"
+    },
+    {
+        "start": 111.05,
+        "end": 116.77,
+        "text": "and an end user login, which is department server, CISO is organizational server."
+    },
+    {
+        "start": 116.77,
+        "end": 120.17,
+        "text": "This CISO is supposed to report to the management and all of these features, which we are"
+    },
+    {
+        "start": 120.17,
+        "end": 121.17,
+        "text": "going to show you."
+    },
+    {
+        "start": 121.17,
+        "end": 122.97,
+        "text": "So can you go on the first dashboard, please?"
+    },
+    {
+        "start": 122.97,
+        "end": 139.71,
+        "text": "Can you post crawl please?"
+    },
+    {
+        "start": 139.71,
+        "end": 148.04,
+        "text": "I can hear you."
+    },
+    {
+        "start": 148.04,
+        "end": 149.04,
+        "text": "I'm not."
+    },
+    {
+        "start": 149.04,
+        "end": 150.04,
+        "text": "Thanochan, can you hear us?"
+    },
+    {
+        "start": 150.04,
+        "end": 151.04,
+        "text": "We'll just check with them."
+    },
+    {
+        "start": 151.04,
+        "end": 155.88,
+        "text": "Passively?"
+    },
+    {
+        "start": 155.88,
+        "end": 156.88,
+        "text": "Yeah."
+    },
+    {
+        "start": 156.88,
+        "end": 165.35,
+        "text": "I think you may be testing the access to that, the IPad we made together."
+    },
+    {
+        "start": 165.35,
+        "end": 171.71,
+        "text": "Yes, Thanochan, please just stay on the call and just move the screen that way."
+    },
+    {
+        "start": 171.71,
+        "end": 177.51,
+        "text": "Now this will be your dashboard as and when you get access as soon as possible, we're going"
+    },
+    {
+        "start": 177.51,
+        "end": 182.31,
+        "text": "to show you the demo as well, but I just want to make sure we save time on this one, Mr."
+    },
+    {
+        "start": 182.31,
+        "end": 183.31,
+        "text": "Parish and Mr. Calpis."
+    },
+    {
+        "start": 183.31,
+        "end": 188.39,
+        "text": "So the dashboard will be colorful dashboard based on the maturity of your program and the practice"
+    },
+    {
+        "start": 188.39,
+        "end": 189.39,
+        "text": "areas."
+    },
+    {
+        "start": 189.39,
+        "end": 193.79,
+        "text": "But this is very, very, very current to the best practices you are following."
+    },
+    {
+        "start": 193.79,
+        "end": 198.59,
+        "text": "So we have customized it to also our BIA and CBI standard for this one."
+    },
+    {
+        "start": 199.59,
+        "end": 201.59,
+        "text": "So you will see that maturity dashboard."
+    },
+    {
+        "start": 201.59,
+        "end": 245.84,
+        "text": "The maturity dashboard is included."
+    },
+    {
+        "start": 245.84,
+        "end": 249.18,
+        "text": "Hey, Thanochan."
+    },
+    {
+        "start": 249.18,
+        "end": 250.94,
+        "text": "Hello, madam."
+    },
+    {
+        "start": 250.94,
+        "end": 255.27,
+        "text": "Yes."
+    },
+    {
+        "start": 255.27,
+        "end": 256.27,
+        "text": "We're trying to figure out what happened."
+    },
+    {
+        "start": 256.27,
+        "end": 261.27,
+        "text": "Mr. Sajit was speaking and he dropped the call actually."
+    },
+    {
+        "start": 261.27,
+        "end": 263.27,
+        "text": "Yeah, I'm just going to text him."
+    },
+    {
+        "start": 263.27,
+        "end": 267.27,
+        "text": "Yeah, I texted him just now, but he's okay."
+    },
+    {
+        "start": 267.27,
+        "end": 269.27,
+        "text": "He said, logged out, continue."
+    },
+    {
+        "start": 269.27,
+        "end": 271.27,
+        "text": "Okay, maybe he is going for this."
+    },
+    {
+        "start": 271.27,
+        "end": 272.27,
+        "text": "Okay."
+    },
+    {
+        "start": 272.27,
+        "end": 273.27,
+        "text": "Go ahead and take over."
+    },
+    {
+        "start": 273.27,
+        "end": 274.27,
+        "text": "Thanochan, if you don't mind."
+    },
+    {
+        "start": 275.27,
+        "end": 276.27,
+        "text": "Yeah, yeah."
+    },
+    {
+        "start": 276.27,
+        "end": 279.27,
+        "text": "So this is the dashboard currently and this would be a live dashboard."
+    },
+    {
+        "start": 279.27,
+        "end": 282.27,
+        "text": "We are going to show him in the product as well right now."
+    },
+    {
+        "start": 282.27,
+        "end": 283.27,
+        "text": "They are just logging in."
+    },
+    {
+        "start": 283.27,
+        "end": 284.27,
+        "text": "So this would be the dashboard."
+    },
+    {
+        "start": 284.27,
+        "end": 290.27,
+        "text": "And then if I just, and this is a blueprint on how to use this app, you know, there would be"
+    },
+    {
+        "start": 290.27,
+        "end": 296.27,
+        "text": "some, some questions of the compliance framework that would be chosen like in terms of"
+    },
+    {
+        "start": 296.27,
+        "end": 300.27,
+        "text": "NIST in terms of savvy in terms of RBI and many other things."
+    },
+    {
+        "start": 300.27,
+        "end": 303.27,
+        "text": "We have committed every questions and then we have put in the app."
+    },
+    {
+        "start": 303.27,
+        "end": 309.27,
+        "text": "And then after giving those answers, it would input the current maturity, the target maturity,"
+    },
+    {
+        "start": 309.27,
+        "end": 315.27,
+        "text": "the initiative prioritization, the budget and the live dashboard in the app itself."
+    },
+    {
+        "start": 315.27,
+        "end": 318.27,
+        "text": "So this is the current features of the app."
+    },
+    {
+        "start": 318.27,
+        "end": 322.72,
+        "text": "Then if you move forward, these are the type of questions that we have to answer."
+    },
+    {
+        "start": 322.72,
+        "end": 326.72,
+        "text": "The current maturity of any initiative or any question."
+    },
+    {
+        "start": 327.72,
+        "end": 330.72,
+        "text": "So there's a sample that the information security charter includes the expectation and"
+    },
+    {
+        "start": 330.72,
+        "end": 333.72,
+        "text": "requirements of interested parties and industry business stakeholders."
+    },
+    {
+        "start": 333.72,
+        "end": 342.72,
+        "text": "This is a type of question which is asked in the CSCRF framework of this of the RBI and in the"
+    },
+    {
+        "start": 342.72,
+        "end": 343.72,
+        "text": "safety framework."
+    },
+    {
+        "start": 343.72,
+        "end": 355.3,
+        "text": "These are the type of spiral charts that the banks have requested to get into the"
+    },
+    {
+        "start": 355.3,
+        "end": 356.3,
+        "text": "product."
+    },
+    {
+        "start": 356.3,
+        "end": 357.3,
+        "text": "So these are the spiral charts."
+    },
+    {
+        "start": 357.3,
+        "end": 362.3,
+        "text": "The blue one shows the current maturity and the red one shows the average benchmark that"
+    },
+    {
+        "start": 362.3,
+        "end": 365.3,
+        "text": "has set it up by the Sesebi or the RBI."
+    },
+    {
+        "start": 365.3,
+        "end": 371.3,
+        "text": "If I move a little bit down, I can also show you the three graphs, three graphs spiral chart"
+    },
+    {
+        "start": 371.3,
+        "end": 376.3,
+        "text": "where what is the target maturity, what is the current maturity and what is the average"
+    },
+    {
+        "start": 376.3,
+        "end": 380.3,
+        "text": "security benchmark in a spiral chart as a whole."
+    },
+    {
+        "start": 380.3,
+        "end": 385.3,
+        "text": "This would be the main go-to for any executive to show on the go."
+    },
+    {
+        "start": 385.3,
+        "end": 396.9,
+        "text": "Alisa, can you hear me?"
+    },
+    {
+        "start": 396.9,
+        "end": 399.6,
+        "text": "Yes, you're audible."
+    },
+    {
+        "start": 399.6,
+        "end": 400.6,
+        "text": "Okay."
+    },
+    {
+        "start": 400.6,
+        "end": 404.6,
+        "text": "Mr. Paresh, do you have any questions or concerns this far?"
+    },
+    {
+        "start": 404.6,
+        "end": 405.6,
+        "text": "No, no, no."
+    },
+    {
+        "start": 405.6,
+        "end": 406.6,
+        "text": "Okay."
+    },
+    {
+        "start": 406.6,
+        "end": 409.78,
+        "text": "This is the main thing."
+    },
+    {
+        "start": 409.78,
+        "end": 410.78,
+        "text": "This is the main thing."
+    },
+    {
+        "start": 410.78,
+        "end": 412.78,
+        "text": "This is the gap score."
+    },
+    {
+        "start": 412.78,
+        "end": 420.78,
+        "text": "We have seven particular areas in our app which focuses on the security parameters of any"
+    },
+    {
+        "start": 420.78,
+        "end": 421.78,
+        "text": "organization."
+    },
+    {
+        "start": 421.78,
+        "end": 427.82,
+        "text": "It has the context leadership to the measurement program and after giving those answers to the"
+    },
+    {
+        "start": 427.82,
+        "end": 433.66,
+        "text": "questions, it has the gap score which defines the current level and the target level."
+    },
+    {
+        "start": 433.66,
+        "end": 439.14,
+        "text": "And then we, and then after that, the graph floating is in the spiral chart."
+    },
+    {
+        "start": 439.14,
+        "end": 446.18,
+        "text": "So once we answer those questions, then we have, once we input those answers, then we have"
+    },
+    {
+        "start": 446.18,
+        "end": 453.18,
+        "text": "these falling charts which can be shown directly on the go, on the live app and these are the"
+    },
+    {
+        "start": 453.18,
+        "end": 456.18,
+        "text": "main things that people need to see."
+    },
+    {
+        "start": 456.18,
+        "end": 457.18,
+        "text": "Right?"
+    },
+    {
+        "start": 457.18,
+        "end": 461.57,
+        "text": "Okay."
+    },
+    {
+        "start": 461.57,
+        "end": 462.57,
+        "text": "Okay."
+    },
+    {
+        "start": 462.57,
+        "end": 463.57,
+        "text": "So the people are joining."
+    },
+    {
+        "start": 463.57,
+        "end": 465.57,
+        "text": "I just got a message."
+    },
+    {
+        "start": 465.57,
+        "end": 469.03,
+        "text": "Okay."
+    },
+    {
+        "start": 469.03,
+        "end": 470.03,
+        "text": "Give me a second."
+    },
+    {
+        "start": 470.03,
+        "end": 475.03,
+        "text": "Give me a second."
+    },
+    {
+        "start": 475.03,
+        "end": 476.03,
+        "text": "Give me a second."
+    },
+    {
+        "start": 476.03,
+        "end": 477.03,
+        "text": "That's okay."
+    },
+    {
+        "start": 477.03,
+        "end": 508.53,
+        "text": "Yes."
+    },
+    {
+        "start": 508.53,
+        "end": 512.59,
+        "text": "So I would also switch into Hindi English both."
+    },
+    {
+        "start": 512.59,
+        "end": 517.59,
+        "text": "So, sir, these are our security dashboard and which I show you in the photo."
+    },
+    {
+        "start": 517.59,
+        "end": 518.59,
+        "text": "This is a live dashboard."
+    },
+    {
+        "start": 518.59,
+        "end": 526.59,
+        "text": "And where we basically go on into a management, we have, we have, we have, I forget it into"
+    },
+    {
+        "start": 526.59,
+        "end": 527.59,
+        "text": "two."
+    },
+    {
+        "start": 527.59,
+        "end": 531.85,
+        "text": "And then if you just scroll down a bit, English."
+    },
+    {
+        "start": 531.85,
+        "end": 535.5,
+        "text": "Okay."
+    },
+    {
+        "start": 535.5,
+        "end": 539.5,
+        "text": "So if you can see the gap score here."
+    },
+    {
+        "start": 539.5,
+        "end": 546.5,
+        "text": "So if, if any practice area has a gap of more than, more than two, then it's, it would"
+    },
+    {
+        "start": 546.5,
+        "end": 548.5,
+        "text": "be denoted as a red color."
+    },
+    {
+        "start": 548.5,
+        "end": 554.0,
+        "text": "If, if, if, if there's a maturity gap, where current maturity gap and the target maturity gap"
+    },
+    {
+        "start": 554.0,
+        "end": 556.5,
+        "text": "is equal, the color will be green."
+    },
+    {
+        "start": 556.5,
+        "end": 561.5,
+        "text": "And if there's a maturity gap, which is between zero to one, then the color will be yellow."
+    },
+    {
+        "start": 561.5,
+        "end": 564.5,
+        "text": "And if one is two, then there's a maturity gap."
+    },
+    {
+        "start": 564.5,
+        "end": 566.5,
+        "text": "So, the color will be orange."
+    },
+    {
+        "start": 566.5,
+        "end": 567.5,
+        "text": "And this is live."
+    },
+    {
+        "start": 567.5,
+        "end": 568.5,
+        "text": "Everything is live."
+    },
+    {
+        "start": 568.5,
+        "end": 572.5,
+        "text": "If you change the current maturity and target maturity level in the questions, then here"
+    },
+    {
+        "start": 572.5,
+        "end": 574.98,
+        "text": "we have to be able to reflect."
+    },
+    {
+        "start": 574.98,
+        "end": 580.08,
+        "text": "Mr. Parish and Mr., Mr. Parish and Mr. Kalpish, are you hearing this?"
+    },
+    {
+        "start": 580.08,
+        "end": 581.08,
+        "text": "Yes."
+    },
+    {
+        "start": 581.08,
+        "end": 582.08,
+        "text": "Yes."
+    },
+    {
+        "start": 582.08,
+        "end": 583.08,
+        "text": "Where?"
+    },
+    {
+        "start": 583.08,
+        "end": 584.21,
+        "text": "Okay."
+    },
+    {
+        "start": 584.21,
+        "end": 585.21,
+        "text": "So, this is our first product."
+    },
+    {
+        "start": 585.21,
+        "end": 587.21,
+        "text": "And we have many products lining up."
+    },
+    {
+        "start": 587.21,
+        "end": 590.21,
+        "text": "So, this is our most premium and in terms of our USB."
+    },
+    {
+        "start": 590.21,
+        "end": 591.21,
+        "text": "This is the dashboard."
+    },
+    {
+        "start": 621.21,
+        "end": 623.21,
+        "text": "So, here, those things will be red."
+    },
+    {
+        "start": 623.21,
+        "end": 628.21,
+        "text": "And here, we will know that we have to focus more on this area."
+    },
+    {
+        "start": 628.21,
+        "end": 630.21,
+        "text": "In terms of security framework."
+    },
+    {
+        "start": 630.21,
+        "end": 633.22,
+        "text": "Okay."
+    },
+    {
+        "start": 633.22,
+        "end": 637.22,
+        "text": "And if you, if you scroll a little bit up, Nilesh."
+    },
+    {
+        "start": 637.22,
+        "end": 639.31,
+        "text": "Yes."
+    },
+    {
+        "start": 639.31,
+        "end": 641.31,
+        "text": "Now, just for an example, here, it's scrolled on red."
+    },
+    {
+        "start": 641.31,
+        "end": 643.31,
+        "text": "So, here, you have questions in your questions."
+    },
+    {
+        "start": 643.31,
+        "end": 644.31,
+        "text": "Do you want to carry on this?"
+    },
+    {
+        "start": 644.31,
+        "end": 645.31,
+        "text": "Sure."
+    },
+    {
+        "start": 645.31,
+        "end": 646.31,
+        "text": "Thank you."
+    },
+    {
+        "start": 646.31,
+        "end": 647.31,
+        "text": "Thanks."
+    },
+    {
+        "start": 647.31,
+        "end": 648.31,
+        "text": "Okay."
+    },
+    {
+        "start": 648.31,
+        "end": 649.73,
+        "text": "Thanks for continuing."
+    },
+    {
+        "start": 649.73,
+        "end": 652.73,
+        "text": "So, Mr. Parish and Mr. Kalpish, this is the dashboard you're seeing."
+    },
+    {
+        "start": 652.73,
+        "end": 661.33,
+        "text": "And I think these are the different maturities of a single program pillars."
+    },
+    {
+        "start": 661.33,
+        "end": 667.42,
+        "text": "So, these are divided into two sections of governance, which is what we are talking about."
+    },
+    {
+        "start": 667.42,
+        "end": 669.42,
+        "text": "So, we're talking about the core."
+    },
+    {
+        "start": 669.42,
+        "end": 671.42,
+        "text": "So, we are talking about the core."
+    },
+    {
+        "start": 671.42,
+        "end": 673.42,
+        "text": "So, we are talking about the core."
+    },
+    {
+        "start": 673.42,
+        "end": 674.42,
+        "text": "Now, just for the core."
+    },
+    {
+        "start": 674.42,
+        "end": 680.62,
+        "text": "So, these are defined into two sections of governance, which is what is quarterly reported"
+    },
+    {
+        "start": 680.62,
+        "end": 685.62,
+        "text": "and annually reported to the management, and then you have the other layers of the management"
+    },
+    {
+        "start": 685.62,
+        "end": 692.9,
+        "text": "which are siloed from prevention, detection, response and recovery and other areas of maturity."
+    },
+    {
+        "start": 692.9,
+        "end": 706.71,
+        "text": "So, let me just, sorry, so yes, so can you go to the next one on the questioner."
+    },
+    {
+        "start": 710.95,
+        "end": 715.75,
+        "text": "So, these are the requirements in the questioner, these are the requirements pulled off."
+    },
+    {
+        "start": 715.75,
+        "end": 716.75,
+        "text": "Am I audible?"
+    },
+    {
+        "start": 716.75,
+        "end": 717.75,
+        "text": "Tanoji, I have to worry."
+    },
+    {
+        "start": 717.75,
+        "end": 719.94,
+        "text": "Yes, yes, you are perfect."
+    },
+    {
+        "start": 719.94,
+        "end": 725.64,
+        "text": "Okay, so these are the requirements pulled off and you can see on the screen, these are parameters"
+    },
+    {
+        "start": 725.64,
+        "end": 732.14,
+        "text": "where you have maturity from limited idea or limited document as evidence to the mature"
+    },
+    {
+        "start": 732.14,
+        "end": 735.34,
+        "text": "state idea or document which you want to comply."
+    },
+    {
+        "start": 735.34,
+        "end": 739.54,
+        "text": "So, our team could be working, having a working session with you."
+    },
+    {
+        "start": 739.54,
+        "end": 744.24,
+        "text": "On this requirements, once you choose those practice areas, and then we are able to give"
+    },
+    {
+        "start": 744.24,
+        "end": 749.74,
+        "text": "you, so remember on the first day, I think Mr. Parish, we showed you, set this layout of"
+    },
+    {
+        "start": 749.74,
+        "end": 755.14,
+        "text": "53% which is bare minimum score, to the maximum score of 90% how that is weighted."
+    },
+    {
+        "start": 755.14,
+        "end": 758.74,
+        "text": "So, that the weighted program is going to be very handy."
+    },
+    {
+        "start": 758.74,
+        "end": 762.74,
+        "text": "Our team is integrating that weighted program, I think we have already done it."
+    },
+    {
+        "start": 762.74,
+        "end": 766.54,
+        "text": "And this will help you understand the score, what you have for your program."
+    },
+    {
+        "start": 766.54,
+        "end": 771.1,
+        "text": "So, these are the requirements and the requirements keep on changing every 3 years to 5 years,"
+    },
+    {
+        "start": 771.1,
+        "end": 775.94,
+        "text": "very like 10% or 5% of the requirements would change based on the score, indeed they would"
+    },
+    {
+        "start": 775.94,
+        "end": 778.14,
+        "text": "have, but this will be incorporated OBS features."
+    },
+    {
+        "start": 778.14,
+        "end": 785.54,
+        "text": "So, the requirements are here, this requirements pull out the RBI, the SEBI and the other frameworks,"
+    },
+    {
+        "start": 785.54,
+        "end": 789.74,
+        "text": "even if you want to follow the international standards, you could follow in this one."
+    },
+    {
+        "start": 789.74,
+        "end": 791.74,
+        "text": "Any questions, so follow in this one?"
+    },
+    {
+        "start": 791.74,
+        "end": 792.74,
+        "text": "No, no."
+    },
+    {
+        "start": 793.74,
+        "end": 795.74,
+        "text": "Go forward, go to the next one."
+    },
+    {
+        "start": 795.74,
+        "end": 800.34,
+        "text": "So, now this is the current state maturity."
+    },
+    {
+        "start": 800.34,
+        "end": 807.34,
+        "text": "In the last 20 years of my consulting with the big force, IPMPWC Deloitte, KPMG, essential,"
+    },
+    {
+        "start": 807.34,
+        "end": 814.34,
+        "text": "they haven't been able to produce and despite a chart which is light cable by the clients."
+    },
+    {
+        "start": 814.34,
+        "end": 820.34,
+        "text": "Now, the clients want to know what the maturity is based on despite a chart and then that 3-minute"
+    },
+    {
+        "start": 820.34,
+        "end": 822.34,
+        "text": "vision into the programs."
+    },
+    {
+        "start": 822.34,
+        "end": 827.34,
+        "text": "So, this will be real time at just a quarterly or even real time when you support evidence."
+    },
+    {
+        "start": 827.34,
+        "end": 834.06,
+        "text": "What we do is we recommend it to do it quarterly because you don't want always changing living"
+    },
+    {
+        "start": 834.06,
+        "end": 838.74,
+        "text": "documentation, so the quarterly reporting is mandatory for your stakeholders."
+    },
+    {
+        "start": 838.74,
+        "end": 844.58,
+        "text": "These have the 7 layers, what you are talking about, the leadership, the risk evaluation,"
+    },
+    {
+        "start": 844.58,
+        "end": 848.34,
+        "text": "the prevention, the detection, the response and the recovery and the direction."
+    },
+    {
+        "start": 849.34,
+        "end": 854.34,
+        "text": "So, these are the 7 layers which are expected to be produced every quarterly and every year."
+    },
+    {
+        "start": 854.34,
+        "end": 858.34,
+        "text": "And the auditors who are from the light buys or the teams, if you have, if you are able"
+    },
+    {
+        "start": 858.34,
+        "end": 863.34,
+        "text": "to show this program, they feel you are very satisfactorily complying to all the requirements"
+    },
+    {
+        "start": 863.34,
+        "end": 864.34,
+        "text": "and you can support evidence."
+    },
+    {
+        "start": 864.34,
+        "end": 867.34,
+        "text": "Go down to the maturities, guys."
+    },
+    {
+        "start": 867.34,
+        "end": 875.46,
+        "text": "Now, this is a gap score, the gap score is more important and I showed you that last time"
+    },
+    {
+        "start": 876.46,
+        "end": 881.46,
+        "text": "if the company tells me that if they want to invest some money in the weaker areas, then"
+    },
+    {
+        "start": 881.46,
+        "end": 885.46,
+        "text": "you can get that gap score based on our working session with you."
+    },
+    {
+        "start": 885.46,
+        "end": 890.46,
+        "text": "So, your target could be in a particular area of 4, level of 4 or a level of 3."
+    },
+    {
+        "start": 890.46,
+        "end": 894.46,
+        "text": "And your gap will determine the kind of budget you are going to spend on each area of these 7 areas."
+    },
+    {
+        "start": 894.46,
+        "end": 899.78,
+        "text": "If you go down, the current mentors, either the red charts or the blue charts."
+    },
+    {
+        "start": 899.78,
+        "end": 901.78,
+        "text": "Now, there are two types of charts."
+    },
+    {
+        "start": 901.78,
+        "end": 907.78,
+        "text": "One of them is minimum compliance for you to save from penalties."
+    },
+    {
+        "start": 907.78,
+        "end": 915.78,
+        "text": "So, what some companies have asked us to do is, we have some minimum benchmarks for them."
+    },
+    {
+        "start": 915.78,
+        "end": 919.78,
+        "text": "So, level 2 company should have DLP and email filtering."
+    },
+    {
+        "start": 919.78,
+        "end": 923.78,
+        "text": "Level 3 company should have email filtering, DLP and a SOC."
+    },
+    {
+        "start": 923.78,
+        "end": 928.78,
+        "text": "So, these are some areas we are trying to work with this requirements and we are trying to integrate it over here."
+    },
+    {
+        "start": 928.78,
+        "end": 933.78,
+        "text": "So, these red charts, red means something where you are falling and the blue could be your targets."
+    },
+    {
+        "start": 933.78,
+        "end": 934.78,
+        "text": "Keep going."
+    },
+    {
+        "start": 934.78,
+        "end": 943.65,
+        "text": "Nilesh can we move on to the maturity gap, actual gap score between current and target?"
+    },
+    {
+        "start": 943.65,
+        "end": 949.65,
+        "text": "Yes. Can you go to the maturity gap on the current target, the next one?"
+    },
+    {
+        "start": 949.65,
+        "end": 951.9,
+        "text": "Yes, maturity gap. Yes."
+    },
+    {
+        "start": 951.9,
+        "end": 956.31,
+        "text": "maturity gap. Yes, this one. Yes."
+    },
+    {
+        "start": 956.31,
+        "end": 959.6,
+        "text": "Yes. So, this is this gap score we are talking about."
+    },
+    {
+        "start": 959.6,
+        "end": 961.6,
+        "text": "So, these are three circles in the spider chart."
+    },
+    {
+        "start": 961.6,
+        "end": 966.6,
+        "text": "The green could be your target, you are defining and I get people who want to be like,"
+    },
+    {
+        "start": 966.6,
+        "end": 968.6,
+        "text": "they want to be the best in the banking."
+    },
+    {
+        "start": 968.6,
+        "end": 971.6,
+        "text": "They want to be the, and they said their own benchmarks."
+    },
+    {
+        "start": 971.6,
+        "end": 975.6,
+        "text": "So, they want to reach at 4 and I have, I think I told you about the healthcare as well."
+    },
+    {
+        "start": 975.6,
+        "end": 980.6,
+        "text": "And so, they want to touch the 4 and for that 4, they want to have a roadmap and a budget."
+    },
+    {
+        "start": 980.6,
+        "end": 985.6,
+        "text": "They are at 2.5 right now for them to be at that 1.5 Delta."
+    },
+    {
+        "start": 985.6,
+        "end": 989.6,
+        "text": "What is the program, what are the resources they need to have, which are the VK leaders they can plan first?"
+    },
+    {
+        "start": 989.6,
+        "end": 994.6,
+        "text": "So, this gap score helps them plan that roadmap out and we will show you that on the last screen."
+    },
+    {
+        "start": 994.6,
+        "end": 1001.77,
+        "text": "Okay, keep moving. And this is a Delta according to the targets as well."
+    },
+    {
+        "start": 1001.77,
+        "end": 1007.77,
+        "text": "So, your target benchmark and your realistic benchmark for your policy can also be benchmarked right now."
+    },
+    {
+        "start": 1007.77,
+        "end": 1012.73,
+        "text": "Okay, any questions so far, guys? No, no, please continue."
+    },
+    {
+        "start": 1012.73,
+        "end": 1017.73,
+        "text": "Now, this is the most important part where I have seen activity with evidence."
+    },
+    {
+        "start": 1017.73,
+        "end": 1022.73,
+        "text": "So, this evidence, this is the initiative list, which is the standard initiative list,"
+    },
+    {
+        "start": 1022.73,
+        "end": 1029.73,
+        "text": "which when you fail in a gap, when you in a practice area, these are those 200 to 250 initiatives,"
+    },
+    {
+        "start": 1029.73,
+        "end": 1032.73,
+        "text": "okay, which needs to be pipeline."
+    },
+    {
+        "start": 1032.73,
+        "end": 1038.73,
+        "text": "Now, based on the maturity, if it is a document, which needs to be created, or a process which needs to be work flowed identified,"
+    },
+    {
+        "start": 1038.73,
+        "end": 1042.73,
+        "text": "or an evidence supporting tracking for SOC incident management."
+    },
+    {
+        "start": 1042.73,
+        "end": 1051.73,
+        "text": "All of these evidences are actually uploaded to the portal and they are then complied and evidence analysis happens."
+    },
+    {
+        "start": 1051.73,
+        "end": 1055.73,
+        "text": "My team does two kinds of analysis, like our tool does."
+    },
+    {
+        "start": 1055.73,
+        "end": 1063.73,
+        "text": "One analysis is done through the CSU AI, where most of the 80% maybe say 70% of the documentation,"
+    },
+    {
+        "start": 1063.73,
+        "end": 1068.73,
+        "text": "which follow the standard guideline, can be analyzed right away in few weeks."
+    },
+    {
+        "start": 1068.73,
+        "end": 1073.73,
+        "text": "So, you do not need to wait for three months to analyze all the 200 documents and have experts to review it."
+    },
+    {
+        "start": 1074.73,
+        "end": 1080.73,
+        "text": "And the rest of the 20 to 30% of the documents, which actually the auditors want to see,"
+    },
+    {
+        "start": 1080.73,
+        "end": 1086.73,
+        "text": "which are the policies, which are the changes that threat protocols, and any of your SOC evidence and correlation,"
+    },
+    {
+        "start": 1086.73,
+        "end": 1090.73,
+        "text": "we keep that time to manually for people to identify in few weeks."
+    },
+    {
+        "start": 1090.73,
+        "end": 1097.73,
+        "text": "So, an evidence somebody is created to the AI tools, and you could get whatever tools you have about the"
+    },
+    {
+        "start": 1097.73,
+        "end": 1099.73,
+        "text": "uploaded of the documents as well."
+    },
+    {
+        "start": 1099.73,
+        "end": 1106.73,
+        "text": "So, being from the auditors side, when I get the relevant, the most timely evidence in the last 90 days,"
+    },
+    {
+        "start": 1106.73,
+        "end": 1108.73,
+        "text": "but this is what it needs to be."
+    },
+    {
+        "start": 1108.73,
+        "end": 1112.73,
+        "text": "So, every 90 days you need to track your vulnerability, SOC and all that incidents,"
+    },
+    {
+        "start": 1112.73,
+        "end": 1116.73,
+        "text": "these are the evidence to that program will be there supported here."
+    },
+    {
+        "start": 1116.73,
+        "end": 1119.73,
+        "text": "And for now, go to the next one."
+    },
+    {
+        "start": 1119.73,
+        "end": 1129.54,
+        "text": "Now, this is the area where the most important to align your security,"
+    },
+    {
+        "start": 1130.54,
+        "end": 1132.54,
+        "text": "your IT with the business."
+    },
+    {
+        "start": 1132.54,
+        "end": 1138.54,
+        "text": "Sometimes, ID does not get recognition, security may not get recognition until you fail compliance."
+    },
+    {
+        "start": 1138.54,
+        "end": 1143.54,
+        "text": "These are the places where you actually give a business case to your management,"
+    },
+    {
+        "start": 1143.54,
+        "end": 1149.54,
+        "text": "where each, if there's a document pending, how many hours of the document pending will be needed by an export?"
+    },
+    {
+        "start": 1149.54,
+        "end": 1154.54,
+        "text": "How many hours of resource expertise if you need to hire or outsource it will be needed?"
+    },
+    {
+        "start": 1154.54,
+        "end": 1159.54,
+        "text": "This, our team will work with you to set up the precedent that this is worldwide,"
+    },
+    {
+        "start": 1159.54,
+        "end": 1163.54,
+        "text": "and we are trying to set up for India as well, and we already have I think set up for few clients,"
+    },
+    {
+        "start": 1163.54,
+        "end": 1166.54,
+        "text": "but it could be custom to your environment."
+    },
+    {
+        "start": 1166.54,
+        "end": 1171.54,
+        "text": "And then you will have a realistic goal and a budget on everyone."
+    },
+    {
+        "start": 1171.54,
+        "end": 1177.54,
+        "text": "So, if you have an infosect direction, the infosect direction has a policy which is five-year-old,"
+    },
+    {
+        "start": 1177.54,
+        "end": 1181.54,
+        "text": "it may just need an update for half a day working and having a workshop."
+    },
+    {
+        "start": 1181.54,
+        "end": 1185.54,
+        "text": "It doesn't, that is what is going to be quoted in a delta of the maturity."
+    },
+    {
+        "start": 1185.54,
+        "end": 1192.12,
+        "text": "Does it make sense, everybody? Keep on."
+    },
+    {
+        "start": 1192.12,
+        "end": 1194.12,
+        "text": "Yes, yes sir."
+    },
+    {
+        "start": 1194.12,
+        "end": 1199.54,
+        "text": "Okay, I think we need to go to the next one."
+    },
+    {
+        "start": 1199.54,
+        "end": 1201.54,
+        "text": "Yeah, we need to go to the next one."
+    },
+    {
+        "start": 1201.54,
+        "end": 1204.54,
+        "text": "Yes, on the Effort Map, yes."
+    },
+    {
+        "start": 1204.54,
+        "end": 1214.85,
+        "text": "Now, last but not the least, Effort is a parish or anybody who is supposed to be reporting it to the stakeholders and management."
+    },
+    {
+        "start": 1214.85,
+        "end": 1220.85,
+        "text": "This is actually the Effort Map Chart, which is like a Gartner quadrant."
+    },
+    {
+        "start": 1220.85,
+        "end": 1228.85,
+        "text": "So, if you guys know about the Gartner quadrant, which is every CEO buying softwares and making decisions based on a map like this."
+    },
+    {
+        "start": 1228.85,
+        "end": 1232.85,
+        "text": "This map is about the low cost and a high benefit chart."
+    },
+    {
+        "start": 1232.85,
+        "end": 1237.85,
+        "text": "So, the topmost right hand corner is the highest benefit of your security initially,"
+    },
+    {
+        "start": 1237.85,
+        "end": 1239.85,
+        "text": "aligning to the business."
+    },
+    {
+        "start": 1239.85,
+        "end": 1245.85,
+        "text": "For example, if there is, you need to align by June on a semi-requirement and if there is something missing,"
+    },
+    {
+        "start": 1245.85,
+        "end": 1250.85,
+        "text": "that will be the top right hand corner and if it has a lower hanging fruit of just updating a policy,"
+    },
+    {
+        "start": 1250.85,
+        "end": 1253.85,
+        "text": "that will be a low cost effort for four hours."
+    },
+    {
+        "start": 1253.85,
+        "end": 1259.85,
+        "text": "So, these initiatives, even if you have a small budget, there would be like you would be talking to a team."
+    },
+    {
+        "start": 1259.85,
+        "end": 1263.85,
+        "text": "And once you set up, then you only have a half of the budget or quarter of a budget."
+    },
+    {
+        "start": 1263.85,
+        "end": 1269.85,
+        "text": "We can select those four or five initiatives for the 40 or 20 initiatives and give that to you."
+    },
+    {
+        "start": 1269.85,
+        "end": 1275.85,
+        "text": "So, this is a very realistic, I think, the Effort Map based on the time cost and benefit effort."
+    },
+    {
+        "start": 1275.85,
+        "end": 1279.85,
+        "text": "And this is very handy for executive to take decisions."
+    },
+    {
+        "start": 1279.85,
+        "end": 1286.85,
+        "text": "So, and this is like you're adding a search tab over here to also let you know if you select on this,"
+    },
+    {
+        "start": 1286.85,
+        "end": 1291.85,
+        "text": "unless you go over the diamond or something, you can show them the task itself."
+    },
+    {
+        "start": 1291.85,
+        "end": 1305.36,
+        "text": "Yes, go over the, yes, go some of the task so we can show them."
+    },
+    {
+        "start": 1305.36,
+        "end": 1310.36,
+        "text": "And then the management can right away approve based on the Effort Map."
+    },
+    {
+        "start": 1310.36,
+        "end": 1311.36,
+        "text": "Right."
+    },
+    {
+        "start": 1311.36,
+        "end": 1314.36,
+        "text": "Anyway, we can show them on the real one."
+    },
+    {
+        "start": 1314.36,
+        "end": 1317.36,
+        "text": "So, and unless can you go over, click on any diamond or something."
+    },
+    {
+        "start": 1317.36,
+        "end": 1319.36,
+        "text": "Click on any diamond or something."
+    },
+    {
+        "start": 1319.36,
+        "end": 1323.24,
+        "text": "Yes."
+    },
+    {
+        "start": 1323.24,
+        "end": 1326.03,
+        "text": "Okay, I got it."
+    },
+    {
+        "start": 1326.03,
+        "end": 1329.06,
+        "text": "Can you see, Mrs. Anjan?"
+    },
+    {
+        "start": 1330.34,
+        "end": 1334.34,
+        "text": "I think I can't see on the screen, but somehow maybe that's not showing."
+    },
+    {
+        "start": 1334.34,
+        "end": 1335.34,
+        "text": "Are you, they've joined from the iPad?"
+    },
+    {
+        "start": 1335.34,
+        "end": 1336.34,
+        "text": "Okay, that's fine."
+    },
+    {
+        "start": 1336.34,
+        "end": 1339.34,
+        "text": "So, these things you are going to see on the mobile app."
+    },
+    {
+        "start": 1339.34,
+        "end": 1344.34,
+        "text": "Our theme is constantly integrating and customizing according to the company."
+    },
+    {
+        "start": 1344.34,
+        "end": 1346.34,
+        "text": "So, every company has a different needs."
+    },
+    {
+        "start": 1346.34,
+        "end": 1351.34,
+        "text": "So, when we are pitching this to a particular customer, they are saying they want to have a search filter here"
+    },
+    {
+        "start": 1351.34,
+        "end": 1355.34,
+        "text": "where they can, they may want to only select the blue diamonds."
+    },
+    {
+        "start": 1356.34,
+        "end": 1357.34,
+        "text": "And what do they show?"
+    },
+    {
+        "start": 1357.34,
+        "end": 1359.34,
+        "text": "If they do not have anyone in a budget."
+    },
+    {
+        "start": 1359.34,
+        "end": 1361.34,
+        "text": "So, we can select from this one."
+    },
+    {
+        "start": 1361.34,
+        "end": 1365.34,
+        "text": "So, I think this version does not show that, right?"
+    },
+    {
+        "start": 1365.34,
+        "end": 1366.89,
+        "text": "The search filter?"
+    },
+    {
+        "start": 1366.89,
+        "end": 1367.89,
+        "text": "Yes."
+    },
+    {
+        "start": 1367.89,
+        "end": 1369.89,
+        "text": "This version doesn't have this search filter right now."
+    },
+    {
+        "start": 1369.89,
+        "end": 1370.89,
+        "text": "Yes."
+    },
+    {
+        "start": 1370.89,
+        "end": 1372.89,
+        "text": "The next one, it has a search filter, obviously."
+    },
+    {
+        "start": 1372.89,
+        "end": 1373.89,
+        "text": "Okay."
+    },
+    {
+        "start": 1373.89,
+        "end": 1374.89,
+        "text": "So, this will be very handy."
+    },
+    {
+        "start": 1374.89,
+        "end": 1377.89,
+        "text": "Okay, go on to the next one."
+    },
+    {
+        "start": 1377.89,
+        "end": 1380.89,
+        "text": "The cost and effort and the grand charts are fine."
+    },
+    {
+        "start": 1380.89,
+        "end": 1385.15,
+        "text": "Yeah."
+    },
+    {
+        "start": 1385.15,
+        "end": 1388.15,
+        "text": "So, this will be, there's one screen before this one."
+    },
+    {
+        "start": 1388.15,
+        "end": 1390.15,
+        "text": "We have the, man, that we come in the final version."
+    },
+    {
+        "start": 1390.15,
+        "end": 1393.15,
+        "text": "This is the four-year roadmap to the amount of initiative."
+    },
+    {
+        "start": 1393.15,
+        "end": 1395.15,
+        "text": "So, if there are 200 requirements."
+    },
+    {
+        "start": 1395.15,
+        "end": 1401.15,
+        "text": "And you would not be starting from the stretch, of course, cultivation and Mr. Parish."
+    },
+    {
+        "start": 1401.15,
+        "end": 1404.15,
+        "text": "But you will have some kind of a program which will be there."
+    },
+    {
+        "start": 1404.15,
+        "end": 1409.15,
+        "text": "But what I've seen is, the first requirement for SEBI and RBI's,"
+    },
+    {
+        "start": 1409.15,
+        "end": 1412.15,
+        "text": "have a scientific program in place, identify your stakeholders,"
+    },
+    {
+        "start": 1412.15,
+        "end": 1415.15,
+        "text": "have a roadmap which could be realistically shown and reported."
+    },
+    {
+        "start": 1416.15,
+        "end": 1420.15,
+        "text": "These are some things, like example, I'm just giving you an example of the V1."
+    },
+    {
+        "start": 1420.15,
+        "end": 1425.15,
+        "text": "So, this program identifies after you did the gap, you took the risk,"
+    },
+    {
+        "start": 1425.15,
+        "end": 1431.15,
+        "text": "you worked with the stakeholders in identifying the pricing, everything, on the workshop."
+    },
+    {
+        "start": 1431.15,
+        "end": 1433.15,
+        "text": "It gives you a four-year roadmap."
+    },
+    {
+        "start": 1433.15,
+        "end": 1436.15,
+        "text": "And this roadmap is needed by every organization, any organization."
+    },
+    {
+        "start": 1436.15,
+        "end": 1440.15,
+        "text": "Like, you guys are strictly compliant with security requirements."
+    },
+    {
+        "start": 1440.15,
+        "end": 1442.15,
+        "text": "And you are going to adhere."
+    },
+    {
+        "start": 1442.15,
+        "end": 1446.15,
+        "text": "And you are, once you claim on insurance and any other entities,"
+    },
+    {
+        "start": 1446.15,
+        "end": 1450.15,
+        "text": "if you get breached unknowingly or knowingly, you already have a program in place"
+    },
+    {
+        "start": 1450.15,
+        "end": 1452.15,
+        "text": "and an action item in place."
+    },
+    {
+        "start": 1452.15,
+        "end": 1457.15,
+        "text": "So, this is the proof of a strategy and it gives you eight percentage out of 400% SEBI."
+    },
+    {
+        "start": 1457.15,
+        "end": 1459.15,
+        "text": "If you have a budget or a roadmap, the screen."
+    },
+    {
+        "start": 1459.15,
+        "end": 1463.15,
+        "text": "So, if you see a V1 V1, there's something which can be done in the next 90 days."
+    },
+    {
+        "start": 1463.15,
+        "end": 1466.15,
+        "text": "This 25-minute shade is, which can be done in the next 90 days,"
+    },
+    {
+        "start": 1466.15,
+        "end": 1469.15,
+        "text": "is costing you $22,000."
+    },
+    {
+        "start": 1469.15,
+        "end": 1472.15,
+        "text": "And it's going to be around, I think, $10,000 or whatever it is."
+    },
+    {
+        "start": 1472.15,
+        "end": 1474.15,
+        "text": "Now, this is, just don't quote on this one."
+    },
+    {
+        "start": 1474.15,
+        "end": 1478.15,
+        "text": "It depends on the size of the company's small, medium and large cop."
+    },
+    {
+        "start": 1478.15,
+        "end": 1483.15,
+        "text": "The number of hours it's going to take for this wave to settle you for compliance."
+    },
+    {
+        "start": 1483.15,
+        "end": 1485.15,
+        "text": "So, $1000 or whatever it is."
+    },
+    {
+        "start": 1485.15,
+        "end": 1487.15,
+        "text": "The total wave ongoing costs."
+    },
+    {
+        "start": 1487.15,
+        "end": 1488.15,
+        "text": "I'll give you an example."
+    },
+    {
+        "start": 1488.15,
+        "end": 1490.15,
+        "text": "You already have a vulnerability management program."
+    },
+    {
+        "start": 1490.15,
+        "end": 1493.15,
+        "text": "You already are doing, but definitely management."
+    },
+    {
+        "start": 1493.15,
+        "end": 1496.15,
+        "text": "And the assessment was not done in the last six months."
+    },
+    {
+        "start": 1496.15,
+        "end": 1498.15,
+        "text": "So, that would be something."
+    },
+    {
+        "start": 1498.15,
+        "end": 1501.15,
+        "text": "So, it would say that you just have to tell the scans and you will not have any criticals."
+    },
+    {
+        "start": 1501.15,
+        "end": 1503.15,
+        "text": "But this is a small effort to make you comply."
+    },
+    {
+        "start": 1503.15,
+        "end": 1506.15,
+        "text": "So, that's an ongoing and you will cost on that one."
+    },
+    {
+        "start": 1506.15,
+        "end": 1507.15,
+        "text": "Something like that."
+    },
+    {
+        "start": 1507.15,
+        "end": 1511.15,
+        "text": "And then you roughly total it to two years, three years or four years."
+    },
+    {
+        "start": 1511.15,
+        "end": 1515.15,
+        "text": "Our people in India are asking me for three years program right now,"
+    },
+    {
+        "start": 1515.15,
+        "end": 1519.15,
+        "text": "which are the normal, no, but in North America it's a four-year program."
+    },
+    {
+        "start": 1519.15,
+        "end": 1521.15,
+        "text": "They usually go for four to five years."
+    },
+    {
+        "start": 1521.15,
+        "end": 1524.31,
+        "text": "So, and these are the different ways."
+    },
+    {
+        "start": 1524.31,
+        "end": 1531.69,
+        "text": "Go on to the wave, the wave one, wave two, again initially on the initial of the screen."
+    },
+    {
+        "start": 1531.69,
+        "end": 1532.69,
+        "text": "Part of the screen."
+    },
+    {
+        "start": 1532.69,
+        "end": 1539.44,
+        "text": "So, if you want to, yeah, no, no, same thing."
+    },
+    {
+        "start": 1539.44,
+        "end": 1541.44,
+        "text": "No, no, go on to the waves at least."
+    },
+    {
+        "start": 1541.44,
+        "end": 1544.02,
+        "text": "The last one, the last one."
+    },
+    {
+        "start": 1544.02,
+        "end": 1546.02,
+        "text": "Cost and effort you are table."
+    },
+    {
+        "start": 1546.02,
+        "end": 1547.02,
+        "text": "Yes."
+    },
+    {
+        "start": 1547.02,
+        "end": 1552.52,
+        "text": "So, these waves could be changed, but sorry, this year."
+    },
+    {
+        "start": 1552.52,
+        "end": 1553.52,
+        "text": "Yes."
+    },
+    {
+        "start": 1553.52,
+        "end": 1555.52,
+        "text": "So, there are 65 initiatives in the lay, wave four."
+    },
+    {
+        "start": 1555.52,
+        "end": 1559.52,
+        "text": "These are should do's or could do's, which could end up."
+    },
+    {
+        "start": 1559.52,
+        "end": 1562.52,
+        "text": "If you don't have a budget, if you don't want to comply with the maximum."
+    },
+    {
+        "start": 1562.52,
+        "end": 1566.52,
+        "text": "So, now, if you remember Mr. Parish, we showed you the 53 percentage"
+    },
+    {
+        "start": 1566.52,
+        "end": 1571.52,
+        "text": "to 70 percentage, 70 to 85, and then 90 percentage above."
+    },
+    {
+        "start": 1571.52,
+        "end": 1575.52,
+        "text": "So, these are certain things which could also be implemented here."
+    },
+    {
+        "start": 1575.52,
+        "end": 1578.52,
+        "text": "Why now people want it by a number of projects they want to know."
+    },
+    {
+        "start": 1578.52,
+        "end": 1580.52,
+        "text": "And this is the three or two, four-year strategy."
+    },
+    {
+        "start": 1580.52,
+        "end": 1583.52,
+        "text": "You're not changing it and nobody's going to bug you."
+    },
+    {
+        "start": 1583.52,
+        "end": 1586.52,
+        "text": "And you already have the clarity and you're proactive enough"
+    },
+    {
+        "start": 1586.52,
+        "end": 1590.52,
+        "text": "to have a budget and a sophisticated program achieving that status."
+    },
+    {
+        "start": 1590.52,
+        "end": 1593.52,
+        "text": "Now, this is one of the apps if you go on to the dashboard again."
+    },
+    {
+        "start": 1593.52,
+        "end": 1602.96,
+        "text": "So, this after you have initial the first three months,"
+    },
+    {
+        "start": 1602.96,
+        "end": 1605.96,
+        "text": "like in the next three months, we are working with many."
+    },
+    {
+        "start": 1605.96,
+        "end": 1609.96,
+        "text": "I think I have told you about around, like we have sent and communicated"
+    },
+    {
+        "start": 1609.96,
+        "end": 1615.96,
+        "text": "to almost around 200 companies, 50 companies have come back with the like"
+    },
+    {
+        "start": 1615.96,
+        "end": 1618.96,
+        "text": "and they want to know because they want to adhere to the deadline."
+    },
+    {
+        "start": 1619.96,
+        "end": 1625.96,
+        "text": "So, we are constantly trying to have this like better and then more time"
+    },
+    {
+        "start": 1625.96,
+        "end": 1627.96,
+        "text": "saving for everybody and the CSOs."
+    },
+    {
+        "start": 1627.96,
+        "end": 1631.96,
+        "text": "So, you do not have to go through all the program roadmap billers."
+    },
+    {
+        "start": 1631.96,
+        "end": 1635.96,
+        "text": "You can go through some which are aligning to your requirements"
+    },
+    {
+        "start": 1635.96,
+        "end": 1637.96,
+        "text": "and some which could be benchmarked right away."
+    },
+    {
+        "start": 1637.96,
+        "end": 1641.96,
+        "text": "Also, you may have some proactive measurements on most of these areas."
+    },
+    {
+        "start": 1641.96,
+        "end": 1646.96,
+        "text": "So, now, this is what we want to do is we want to drop for the POC."
+    },
+    {
+        "start": 1647.96,
+        "end": 1651.96,
+        "text": "We want to drop a tablet with this particular program inside"
+    },
+    {
+        "start": 1651.96,
+        "end": 1652.96,
+        "text": "and there are other programs as well."
+    },
+    {
+        "start": 1652.96,
+        "end": 1653.96,
+        "text": "Can you show that?"
+    },
+    {
+        "start": 1653.96,
+        "end": 1657.63,
+        "text": "Do you have this risk assessment over here?"
+    },
+    {
+        "start": 1657.63,
+        "end": 1658.63,
+        "text": "Anybody?"
+    },
+    {
+        "start": 1658.63,
+        "end": 1659.98,
+        "text": "I am at Kineja's."
+    },
+    {
+        "start": 1659.98,
+        "end": 1661.98,
+        "text": "Can you just go on the reports right now?"
+    },
+    {
+        "start": 1661.98,
+        "end": 1662.98,
+        "text": "Yes."
+    },
+    {
+        "start": 1662.98,
+        "end": 1663.98,
+        "text": "I sure that you miss us."
+    },
+    {
+        "start": 1663.98,
+        "end": 1664.98,
+        "text": "We do not have in this version."
+    },
+    {
+        "start": 1664.98,
+        "end": 1666.98,
+        "text": "We have that in the iPad version."
+    },
+    {
+        "start": 1666.98,
+        "end": 1670.98,
+        "text": "We can show him the report that can be generated from the app as well."
+    },
+    {
+        "start": 1670.98,
+        "end": 1672.08,
+        "text": "Yes."
+    },
+    {
+        "start": 1672.08,
+        "end": 1679.0,
+        "text": "Yes."
+    },
+    {
+        "start": 1679.0,
+        "end": 1680.8,
+        "text": "Okay."
+    },
+    {
+        "start": 1680.8,
+        "end": 1687.8,
+        "text": "So, there is a security assurance, Mr. Parish and Mr. Kulpesh."
+    },
+    {
+        "start": 1687.8,
+        "end": 1693.8,
+        "text": "There is a security assurance report which is supposed to be annually submitted to the stakeholders."
+    },
+    {
+        "start": 1693.8,
+        "end": 1695.8,
+        "text": "Is there any report you guys submit right now?"
+    },
+    {
+        "start": 1695.8,
+        "end": 1716.14,
+        "text": "It is a operation, Mr. Kulpesh."
+    },
+    {
+        "start": 1716.14,
+        "end": 1717.14,
+        "text": "Please tell me."
+    },
+    {
+        "start": 1717.14,
+        "end": 1718.14,
+        "text": "Please tell me."
+    },
+    {
+        "start": 1718.14,
+        "end": 1719.14,
+        "text": "Please."
+    },
+    {
+        "start": 1719.14,
+        "end": 1720.14,
+        "text": "Will you pick it again?"
+    },
+    {
+        "start": 1720.14,
+        "end": 1721.14,
+        "text": "Yes."
+    },
+    {
+        "start": 1721.14,
+        "end": 1722.14,
+        "text": "I am saying, do you have..."
+    },
+    {
+        "start": 1722.14,
+        "end": 1723.14,
+        "text": "So, this is a security assurance report."
+    },
+    {
+        "start": 1723.14,
+        "end": 1724.14,
+        "text": "You are building for a customer."
+    },
+    {
+        "start": 1724.14,
+        "end": 1725.14,
+        "text": "Do you have..."
+    },
+    {
+        "start": 1725.14,
+        "end": 1726.14,
+        "text": "So, there are two ways to this."
+    },
+    {
+        "start": 1726.14,
+        "end": 1731.14,
+        "text": "You can send a report to your stakeholders and your partners and your auditors and security assurance report would look like this."
+    },
+    {
+        "start": 1731.14,
+        "end": 1732.14,
+        "text": "Yes."
+    },
+    {
+        "start": 1732.14,
+        "end": 1733.14,
+        "text": "Do you send anything?"
+    },
+    {
+        "start": 1733.14,
+        "end": 1734.14,
+        "text": "Yes."
+    },
+    {
+        "start": 1734.14,
+        "end": 1737.14,
+        "text": "It will be published at the end of your general meeting."
+    },
+    {
+        "start": 1737.14,
+        "end": 1738.36,
+        "text": "Right."
+    },
+    {
+        "start": 1738.36,
+        "end": 1739.36,
+        "text": "So, do you send it right now?"
+    },
+    {
+        "start": 1739.36,
+        "end": 1740.36,
+        "text": "Yes."
+    },
+    {
+        "start": 1740.36,
+        "end": 1741.36,
+        "text": "Yes."
+    },
+    {
+        "start": 1741.36,
+        "end": 1742.36,
+        "text": "Okay."
+    },
+    {
+        "start": 1742.36,
+        "end": 1744.36,
+        "text": "And so, this could be some place which could be."
+    },
+    {
+        "start": 1744.36,
+        "end": 1747.36,
+        "text": "So, you do not have to pull your team at the last minute."
+    },
+    {
+        "start": 1747.36,
+        "end": 1749.36,
+        "text": "But it is not the right of it."
+    },
+    {
+        "start": 1749.36,
+        "end": 1750.36,
+        "text": "All of our..."
+    },
+    {
+        "start": 1750.36,
+        "end": 1751.36,
+        "text": "All of our..."
+    },
+    {
+        "start": 1751.36,
+        "end": 1754.36,
+        "text": "You bear paying is your property security measurement and because..."
+    },
+    {
+        "start": 1754.36,
+        "end": 1755.36,
+        "text": "It's for the..."
+    },
+    {
+        "start": 1755.36,
+        "end": 1757.36,
+        "text": "For the whole team to comply with the RBI."
+    },
+    {
+        "start": 1757.36,
+        "end": 1758.36,
+        "text": "There is no..."
+    },
+    {
+        "start": 1758.36,
+        "end": 1759.36,
+        "text": "It is a..."
+    },
+    {
+        "start": 1759.36,
+        "end": 1761.36,
+        "text": "General..."
+    },
+    {
+        "start": 1761.36,
+        "end": 1762.36,
+        "text": "General..."
+    },
+    {
+        "start": 1762.36,
+        "end": 1763.36,
+        "text": "Publisher..."
+    },
+    {
+        "start": 1763.36,
+        "end": 1764.62,
+        "text": "Publisher..."
+    },
+    {
+        "start": 1764.62,
+        "end": 1765.62,
+        "text": "It is not needed."
+    },
+    {
+        "start": 1765.62,
+        "end": 1766.62,
+        "text": "Okay."
+    },
+    {
+        "start": 1766.62,
+        "end": 1767.62,
+        "text": "Fine."
+    },
+    {
+        "start": 1767.62,
+        "end": 1769.62,
+        "text": "So, and do you do internal audits or external audits?"
+    },
+    {
+        "start": 1769.62,
+        "end": 1770.62,
+        "text": "Yes."
+    },
+    {
+        "start": 1770.62,
+        "end": 1771.74,
+        "text": "Yes."
+    },
+    {
+        "start": 1771.74,
+        "end": 1772.74,
+        "text": "We do."
+    },
+    {
+        "start": 1772.74,
+        "end": 1773.74,
+        "text": "Okay."
+    },
+    {
+        "start": 1773.74,
+        "end": 1774.74,
+        "text": "Fine."
+    },
+    {
+        "start": 1774.74,
+        "end": 1775.74,
+        "text": "And..."
+    },
+    {
+        "start": 1775.74,
+        "end": 1777.74,
+        "text": "So, do you have a program like this in place right now?"
+    },
+    {
+        "start": 1777.74,
+        "end": 1778.74,
+        "text": "No."
+    },
+    {
+        "start": 1778.74,
+        "end": 1780.74,
+        "text": "It will be egg rolling direction and let it be a major..."
+    },
+    {
+        "start": 1780.74,
+        "end": 1781.78,
+        "text": "Major major measure, need..."
+    },
+    {
+        "start": 1781.78,
+        "end": 1782.74,
+        "text": "Major measure, need based solution."
+    },
+    {
+        "start": 1782.74,
+        "end": 1790.04,
+        "text": "It badly"
+    },
+    {
+        "start": 1790.04,
+        "end": 1792.24,
+        "text": "It's not possible to pull sand off system implemented."
+    },
+    {
+        "start": 1792.24,
+        "end": 1793.74,
+        "text": "Right."
+    },
+    {
+        "start": 1793.74,
+        "end": 1794.74,
+        "text": "So, what is the opinion of this one so far on..."
+    },
+    {
+        "start": 1794.74,
+        "end": 1795.74,
+        "text": "出 of the, certain cases?"
+    },
+    {
+        "start": 1795.74,
+        "end": 1796.74,
+        "text": "We will go to."
+    },
+    {
+        "start": 1796.74,
+        "end": 1798.74,
+        "text": "You see, and..."
+    },
+    {
+        "start": 1798.74,
+        "end": 1800.74,
+        "text": "Yes."
+    },
+    {
+        "start": 1800.74,
+        "end": 1801.74,
+        "text": "Up with it we are..."
+    },
+    {
+        "start": 1801.74,
+        "end": 1804.74,
+        "text": "We are able to give forecasting."
+    },
+    {
+        "start": 1804.74,
+        "end": 1807.74,
+        "text": "We are not able to give pyt Hawoatด the tools..."
+    },
+    {
+        "start": 1807.74,
+        "end": 1814.06,
+        "text": "useful to our environment and the other activity and other other activity complex."
+    },
+    {
+        "start": 1814.06,
+        "end": 1821.26,
+        "text": "First of all, we use it and then after we give you, honestly, review and if it is useful"
+    },
+    {
+        "start": 1821.26,
+        "end": 1825.67,
+        "text": "to our initiative, we will go to other programs."
+    },
+    {
+        "start": 1825.67,
+        "end": 1827.92,
+        "text": "Okay."
+    },
+    {
+        "start": 1827.92,
+        "end": 1828.92,
+        "text": "Okay, fine."
+    },
+    {
+        "start": 1828.92,
+        "end": 1834.08,
+        "text": "So, I think that's good enough feedback I get, so we can start the POC, when can we start"
+    },
+    {
+        "start": 1834.08,
+        "end": 1835.08,
+        "text": "the POC?"
+    },
+    {
+        "start": 1836.08,
+        "end": 1842.44,
+        "text": "But would you need to align your team, Mr. Calpeche Parach, or Mr. Calpeche, I think you would"
+    },
+    {
+        "start": 1842.44,
+        "end": 1843.44,
+        "text": "know."
+    },
+    {
+        "start": 1843.44,
+        "end": 1849.88,
+        "text": "So, these areas like governance, I think we can have, but we usually do the POC for a month."
+    },
+    {
+        "start": 1849.88,
+        "end": 1854.08,
+        "text": "Would you be able to dedicate one or two resources for your site or for a month, or just one"
+    },
+    {
+        "start": 1854.08,
+        "end": 1855.08,
+        "text": "month after the iPad?"
+    },
+    {
+        "start": 1855.08,
+        "end": 1863.52,
+        "text": "Please let me know how many hours daily spend in a process of POC, because of this month of"
+    },
+    {
+        "start": 1863.52,
+        "end": 1864.52,
+        "text": "the year."
+    },
+    {
+        "start": 1864.52,
+        "end": 1871.86,
+        "text": "We are able to go with the POC 10 or 13, with the 10th of April, okay."
+    },
+    {
+        "start": 1871.86,
+        "end": 1877.38,
+        "text": "So, what I will do is I will design a process in which and you will be happy to hear that"
+    },
+    {
+        "start": 1877.38,
+        "end": 1884.46,
+        "text": "we can extract, so we have some AI data shopping teams, they can come in and then if you put those"
+    },
+    {
+        "start": 1884.46,
+        "end": 1885.46,
+        "text": "evidences."
+    },
+    {
+        "start": 1885.46,
+        "end": 1892.14,
+        "text": "So, we may require a few workshops only and we may require a few information gathering sessions"
+    },
+    {
+        "start": 1892.14,
+        "end": 1897.42,
+        "text": "and then we can pull data in a way in which it will not be very, like, number 7, I talked"
+    },
+    {
+        "start": 1897.42,
+        "end": 1898.42,
+        "text": "to you for you."
+    },
+    {
+        "start": 1898.42,
+        "end": 1905.14,
+        "text": "So, as part of, say, 10th of April, we have a kickoff where we will drop off the version"
+    },
+    {
+        "start": 1905.14,
+        "end": 1909.34,
+        "text": "of the mobile app version with this one and our team will schedule some meetings with the"
+    },
+    {
+        "start": 1909.34,
+        "end": 1914.14,
+        "text": "stakeholders, making sure that we do not eat up much of your time, it is an advanced schedule"
+    },
+    {
+        "start": 1914.14,
+        "end": 1915.14,
+        "text": "with you."
+    },
+    {
+        "start": 1915.14,
+        "end": 1916.9,
+        "text": "Makes sense?"
+    },
+    {
+        "start": 1916.9,
+        "end": 1917.9,
+        "text": "Okay."
+    },
+    {
+        "start": 1917.9,
+        "end": 1918.9,
+        "text": "Wonderful."
+    },
+    {
+        "start": 1918.9,
+        "end": 1925.9,
+        "text": "So, one last thing on this, one last thing on this, I am, in this, sir, we have to say that"
+    },
+    {
+        "start": 1925.9,
+        "end": 1935.9,
+        "text": "we are all your, all your team members, all your AI members, so we will try to get the data"
+    },
+    {
+        "start": 1935.9,
+        "end": 1940.94,
+        "text": "from your servers or from your cloud servers, that we are all your interactions, all your"
+    },
+    {
+        "start": 1971.1,
+        "end": 1976.02,
+        "text": "stuff, why you are crafting, so I would ask Alisa and we will have the next kickoff meeting"
+    },
+    {
+        "start": 1976.02,
+        "end": 1980.1,
+        "text": "for this POC on the 10th of April, guys."
+    },
+    {
+        "start": 1980.1,
+        "end": 1987.06,
+        "text": "And before that, get the team AI data and the BIT ready and then have the workshops so you"
+    },
+    {
+        "start": 1987.06,
+        "end": 1994.1,
+        "text": "can get the MSA for the POC and the research proposals signed by them."
+    },
+    {
+        "start": 1994.1,
+        "end": 1997.86,
+        "text": "Okay, on both sides, so we tell them the procedure as well."
+    },
+    {
+        "start": 1997.86,
+        "end": 1999.5,
+        "text": "One meeting before that you can do it."
+    },
+    {
+        "start": 1999.5,
+        "end": 2004.5,
+        "text": "So, maybe, Alisa, you can just set up one meeting before that with Mr. Calpeche, if needed"
+    },
+    {
+        "start": 2004.5,
+        "end": 2008.82,
+        "text": "to make sure he understands the process for the POC and where you need to align his team"
+    },
+    {
+        "start": 2008.82,
+        "end": 2012.3,
+        "text": "and that he can start on the POC for 10 days."
+    },
+    {
+        "start": 2012.3,
+        "end": 2013.3,
+        "text": "Yeah, absolutely."
+    },
+    {
+        "start": 2013.3,
+        "end": 2014.88,
+        "text": "Okay."
+    },
+    {
+        "start": 2014.88,
+        "end": 2015.88,
+        "text": "So, just set up one time."
+    },
+    {
+        "start": 2015.88,
+        "end": 2020.88,
+        "text": "So, when is a good time just before the 10th April to connect Mr. Calpeche?"
+    },
+    {
+        "start": 2020.88,
+        "end": 2022.88,
+        "text": "Yes, yes, definitely."
+    },
+    {
+        "start": 2022.88,
+        "end": 2028.19,
+        "text": "Do you have a preferred time more day that we could go ahead and schedule that right now?"
+    },
+    {
+        "start": 2028.19,
+        "end": 2034.39,
+        "text": "During the each time the police will be possible to see the some roles, template and how to"
+    },
+    {
+        "start": 2034.39,
+        "end": 2038.79,
+        "text": "configure and what is the road that was planning."
+    },
+    {
+        "start": 2038.79,
+        "end": 2039.79,
+        "text": "Okay."
+    },
+    {
+        "start": 2039.79,
+        "end": 2040.79,
+        "text": "We'll do."
+    },
+    {
+        "start": 2040.79,
+        "end": 2041.79,
+        "text": "We'll do."
+    },
+    {
+        "start": 2041.79,
+        "end": 2049.19,
+        "text": "More client-less in India via incessive specific look which bank are using these tools and"
+    },
+    {
+        "start": 2049.19,
+        "end": 2052.99,
+        "text": "what is your effect, if it needs or just shown."
+    },
+    {
+        "start": 2052.99,
+        "end": 2053.99,
+        "text": "Wonderful."
+    },
+    {
+        "start": 2053.99,
+        "end": 2054.99,
+        "text": "We'll do that."
+    },
+    {
+        "start": 2054.99,
+        "end": 2055.99,
+        "text": "We'll do that."
+    },
+    {
+        "start": 2055.99,
+        "end": 2056.99,
+        "text": "Thanks."
+    },
+    {
+        "start": 2056.99,
+        "end": 2057.99,
+        "text": "We're working already there."
+    },
+    {
+        "start": 2057.99,
+        "end": 2062.99,
+        "text": "No, they are the PCP, the AKA, the Akhan Anand and so there could be some differences we can"
+    },
+    {
+        "start": 2062.99,
+        "end": 2063.99,
+        "text": "share with you."
+    },
+    {
+        "start": 2063.99,
+        "end": 2064.99,
+        "text": "We are already positioning it."
+    },
+    {
+        "start": 2064.99,
+        "end": 2069.39,
+        "text": "We are working on the talk and we are also reinforcing investigation for these companies"
+    },
+    {
+        "start": 2069.39,
+        "end": 2070.39,
+        "text": "right now."
+    },
+    {
+        "start": 2070.39,
+        "end": 2071.39,
+        "text": "So, okay."
+    },
+    {
+        "start": 2071.39,
+        "end": 2076.11,
+        "text": "So, we'll share some details with you and at least the worry thing is we can share the program"
+    },
+    {
+        "start": 2076.11,
+        "end": 2082.03,
+        "text": "roadmap for the POC and then stay put at least what he can fill out in advance itself for the"
+    },
+    {
+        "start": 2082.03,
+        "end": 2083.03,
+        "text": "access to the documentation."
+    },
+    {
+        "start": 2083.03,
+        "end": 2084.03,
+        "text": "Yes."
+    },
+    {
+        "start": 2084.11,
+        "end": 2087.11,
+        "text": "So, I think this is very productive for us."
+    },
+    {
+        "start": 2087.11,
+        "end": 2088.83,
+        "text": "Thanks for staying very patient, Mr. Kalpesh."
+    },
+    {
+        "start": 2088.83,
+        "end": 2090.71,
+        "text": "And this is only one tool which is GAV."
+    },
+    {
+        "start": 2090.71,
+        "end": 2091.71,
+        "text": "We have SOB."
+    },
+    {
+        "start": 2091.71,
+        "end": 2096.47,
+        "text": "We have, I think, risk-management which you will love it for this management which is one"
+    },
+    {
+        "start": 2096.47,
+        "end": 2098.51,
+        "text": "of the kind in the industry."
+    },
+    {
+        "start": 2098.51,
+        "end": 2103.41,
+        "text": "So, what I would want to do is let's start with the POC for this one and then let's start"
+    },
+    {
+        "start": 2103.41,
+        "end": 2107.27,
+        "text": "with having a working session with you and you will understand more of how our products"
+    },
+    {
+        "start": 2107.27,
+        "end": 2108.27,
+        "text": "are working."
+    },
+    {
+        "start": 2108.27,
+        "end": 2112.11,
+        "text": "And it's like the whole see-saw logging we are trying to give you the product on the"
+    },
+    {
+        "start": 2112.11,
+        "end": 2117.31,
+        "text": "So, but if you have any questions, please reach out to Alisa and Tanuch from my team."
+    },
+    {
+        "start": 2117.31,
+        "end": 2121.67,
+        "text": "Alisa will handle any business kind of the follow-up call, and then she will be able to arrange"
+    },
+    {
+        "start": 2121.67,
+        "end": 2122.67,
+        "text": "resources for you."
+    },
+    {
+        "start": 2122.67,
+        "end": 2128.67,
+        "text": "Tanuch will handle any kind of technical resources, arrangements, access, onboarding to the app,"
+    },
+    {
+        "start": 2128.67,
+        "end": 2132.91,
+        "text": "recently trying to get ready, and then you can also reach out to me in terms of anything"
+    },
+    {
+        "start": 2132.91,
+        "end": 2137.59,
+        "text": "in terms of reference, clients, or whatever you want to ask for, like, how you want to size"
+    },
+    {
+        "start": 2137.59,
+        "end": 2138.59,
+        "text": "this one."
+    },
+    {
+        "start": 2138.59,
+        "end": 2139.59,
+        "text": "Is it an opportunity?"
+    },
+    {
+        "start": 2139.59,
+        "end": 2140.59,
+        "text": "Okay?"
+    },
+    {
+        "start": 2140.59,
+        "end": 2141.59,
+        "text": "Okay."
+    },
+    {
+        "start": 2141.59,
+        "end": 2142.59,
+        "text": "Thank you very much."
+    },
+    {
+        "start": 2142.59,
+        "end": 2143.59,
+        "text": "Very much."
+    },
+    {
+        "start": 2143.59,
+        "end": 2144.59,
+        "text": "Very interesting."
+    },
+    {
+        "start": 2144.59,
+        "end": 2145.59,
+        "text": "Nice questions."
+    },
+    {
+        "start": 2145.59,
+        "end": 2149.27,
+        "text": "Mr. Parish, thank you very much for lining up your other people, and we look forward to working"
+    },
+    {
+        "start": 2149.27,
+        "end": 2150.27,
+        "text": "with you."
+    },
+    {
+        "start": 2150.27,
+        "end": 2151.27,
+        "text": "All the time you're ready."
+    },
+    {
+        "start": 2151.27,
+        "end": 2152.27,
+        "text": "Thank you guys."
+    },
+    {
+        "start": 2152.27,
+        "end": 2153.27,
+        "text": "Thank you very much."
+    },
+    {
+        "start": 2153.27,
+        "end": 2154.27,
+        "text": "Thank you very much."
+    },
+    {
+        "start": 2154.27,
+        "end": 2155.27,
+        "text": "Thank you."
+    }
+]

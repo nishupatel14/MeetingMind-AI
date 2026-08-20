@@ -1,0 +1,93 @@
+{
+    "report_information": {
+        "generated_by": "MeetingMind AI",
+        "version": "2.0",
+        "report_type": "Enterprise Meeting Analysis Report"
+    },
+    "metadata": {
+        "meeting_id": "meeting_9b2ed0371e094e47b15491534c788fe7",
+        "language": "English",
+        "word_count": 1331,
+        "sentence_count": 53,
+        "reading_time": "6.7 min",
+        "duration_minutes": "10.2 min"
+    },
+    "executive_summary": "========== EXECUTIVE SUMMARY ==========\n\nThe meeting focused on the growing importance of sustainability in supply chain management, driven by large companies adopting standards like ISO 20400. The discussion centered on environmental and regulatory compliance issues affecting international trade.\n\nKey Strategic Outcomes:\n• Suppliers are being selected based on sustainability ratings.\n• The EU's border adjustment mechanism requires emissions disclosure from non-EU manufacturers.\n• Emissions caps will be set for products exported to the EU.",
+    "discussion_topics": [
+        {
+            "title": "Stakeholder Engagement and Sustainability Commitments",
+            "details": [
+                "These topics cover the core strategies discussed during the meeting, focusing on addressing environmental compliance, international standards adherence, economic implications, corporate responsibility, and stakeholder engagement."
+            ]
+        }
+    ],
+    "key_discussion": [
+        {
+            "topic": "Sustainability Procurement Strategy Implementation",
+            "points": [
+                {
+                    "timestamp": "00:19",
+                    "type": "Fact",
+                    "text": "ISO 20404040 Standard Mentioned"
+                },
+                {
+                    "timestamp": "00:26",
+                    "type": "Concern",
+                    "text": "Supplier Chain Alignment Concern Raised"
+                }
+            ]
+        }
+    ],
+    "key_decisions": [
+        {
+            "decision": "No explicit decisions were identified in the meeting.",
+            "context": "Discussion remained exploratory.",
+            "responsible": "N/A"
+        }
+    ],
+    "action_items": [
+        {
+            "owner": "Supplier Management Team",
+            "task": "Establish a supplier selection criteria that prioritizes sustainability and comply with regulatory standards.",
+            "deadline": "Not specified",
+            "priority": "High",
+            "context": "To enhance supply chain management by selecting suppliers who adhere to sustainability goals and meet regulatory obligations, this initiative will involve rigorous screening processes focusing on certification levels, material usage, waste reduction efforts, and operational efficiency improvements aligned with global sustainability frameworks."
+        },
+        {
+            "owner": "The team",
+            "task": "Implement a system for tracking and monitoring supplier performance against sustainability targets using data analytics tools.",
+            "deadline": "Not specified",
+            "priority": "High",
+            "context": ""
+        },
+        {
+            "owner": "Supplier Management Team",
+            "task": "Conduct regular reviews of supplier relationships to assess ongoing effectiveness and identify areas needing further optimization based on feedback received during previous evaluations.",
+            "deadline": "Not specified",
+            "priority": "High",
+            "context": ""
+        },
+        {
+            "owner": "The team",
+            "task": "Collaborate with external experts specializing in sustainability and climate change mitigation to develop innovative solutions tailored specifically to our specific needs.",
+            "deadline": "Not specified",
+            "priority": "High",
+            "context": ""
+        },
+        {
+            "owner": "Supplier Management Team",
+            "task": "Create a detailed roadmap outlining phased implementation steps towards achieving full sustainability coverage including timelines, milestones, and responsible parties.",
+            "deadline": "Not specified",
+            "priority": "High",
+            "context": ""
+        },
+        {
+            "owner": "The team",
+            "task": "Organize training sessions for employees",
+            "deadline": "Not specified",
+            "priority": "Medium",
+            "context": ""
+        }
+    ],
+    "open_questions": []
+}

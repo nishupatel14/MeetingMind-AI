@@ -1,0 +1,39 @@
+========== ACTION ITEMS ==========
+
+1.
+  Owner: Supplier Management Team
+  Task: Establish a supplier selection criteria that prioritizes sustainability and comply with regulatory standards.
+  Deadline: Not specified
+  Priority: High
+  Context: To enhance supply chain management by selecting suppliers who adhere to sustainability goals and meet regulatory obligations, this initiative will involve rigorous screening processes focusing on certification levels, material usage, waste reduction efforts, and operational efficiency improvements aligned with global sustainability frameworks.
+
+2.
+  Owner: The team
+  Task: Implement a system for tracking and monitoring supplier performance against sustainability targets using data analytics tools.
+  Deadline: Not specified
+  Priority: High
+
+3.
+  Owner: Supplier Management Team
+  Task: Conduct regular reviews of supplier relationships to assess ongoing effectiveness and identify areas needing further optimization based on feedback received during previous evaluations.
+  Deadline: Not specified
+  Priority: High
+
+4.
+  Owner: The team
+  Task: Collaborate with external experts specializing in sustainability and climate change mitigation to develop innovative solutions tailored specifically to our specific needs.
+  Deadline: Not specified
+  Priority: High
+
+5.
+  Owner: Supplier Management Team
+  Task: Create a detailed roadmap outlining phased implementation steps towards achieving full sustainability coverage including timelines, milestones, and responsible parties.
+  Deadline: Not specified
+  Priority: High
+
+6.
+  Owner: The team
+  Task: Organize training sessions for employees
+  Deadline: Not specified
+  Priority: Medium
+

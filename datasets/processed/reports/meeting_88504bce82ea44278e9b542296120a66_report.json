@@ -1,0 +1,21 @@
+{
+    "summary": "========== MEETING SUMMARY ==========",
+    "topics": [
+        "========== MEETING TOPICS =========="
+    ],
+    "action_items": [
+        "========== ACTION ITEMS ==========",
+        "No action items were assigned during this meeting."
+    ],
+    "decisions": [
+        "========== MEETING DECISIONS ==========",
+        "1. No formal decisions were made during this meeting."
+    ],
+    "metadata": {
+        "Meeting ID": "Unknown",
+        "Language": "English",
+        "Total Words": 6564,
+        "Total Sentences": 537,
+        "Estimated Duration": "50.5 min"
+    }
+}

@@ -1,0 +1,6 @@
+========== KEY DECISIONS ==========
+
+1. Decision: Assigning a specific number
+   Context: To track accurate project progress accurately.
+   Responsible: Chris (not specified)
+

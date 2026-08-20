@@ -1,0 +1,175 @@
+"""
+Project configuration settings.
+"""
+
+from pathlib import Path
+
+import torch
+
+# ==========================
+# Project Paths
+# ==========================
+
+PROJECT_ROOT = Path(__file__).resolve().parent.parent
+
+RAW_DATASET = PROJECT_ROOT / "datasets" / "raw" / "meetings"
+PROCESSED_DATASET = PROJECT_ROOT / "datasets" / "processed"
+
+WAV_FOLDER = PROCESSED_DATASET / "wav"
+METADATA_FOLDER = PROCESSED_DATASET / "metadata"
+TRANSCRIPT_FOLDER = PROCESSED_DATASET / "transcripts"
+ACTION_ITEMS_FOLDER = PROCESSED_DATASET / "action_items"
+
+# ==========================
+# Audio Settings
+# ==========================
+
+SUPPORTED_FORMATS = [".mp3", ".wav", ".m4a", ".flac"]
+
+TARGET_SAMPLE_RATE = 16000
+
+MAX_FILE_SIZE_MB = 500
+
+MIN_DURATION_SECONDS = 10
+
+MAX_DURATION_SECONDS = 3 * 60 * 60
+
+# ==========================
+# Hybrid Device Configuration
+# ─────────────────────────────────────────────────────
+# Whisper  : faster-whisper on CPU (multi-threaded, no VRAM used)
+# NLP      : Llama 3.3 70B / Gemini 3.6 Flash / Qwen 2.5 local model
+# Converter: Native ffmpeg CLI (2–3 seconds for any file size)
+# ==========================
+
+import os
+import sys
+import multiprocessing
+
+# Allow CUDA device 0 to be available for local NLP fallback (Qwen on GPU)
+os.environ.setdefault("CUDA_VISIBLE_DEVICES", "0")
+
+# Register PyTorch CUDA DLLs on Windows for CTranslate2 / Faster-Whisper
+if sys.platform == "win32" and torch.cuda.is_available():
+    torch_lib = os.path.join(os.path.dirname(torch.__file__), "lib")
+    if os.path.exists(torch_lib):
+        if hasattr(os, "add_dll_directory"):
+            try:
+                os.add_dll_directory(torch_lib)
+            except Exception:
+                pass
+        os.environ["PATH"] = torch_lib + os.path.pathsep + os.environ.get("PATH", "")
+
+# Use all CPU cores for Whisper transcription and PyTorch operations
+NUM_CORES = multiprocessing.cpu_count()
+torch.set_num_threads(NUM_CORES)
+os.environ["OMP_NUM_THREADS"] = str(NUM_CORES)
+os.environ["MKL_NUM_THREADS"] = str(NUM_CORES)
+
+# ── Whisper: runs on CPU (faster-whisper with INT8 quantization) ──
+WHISPER_DEVICE = "cpu"
+WHISPER_COMPUTE_TYPE = "int8"       # INT8 quantization: fastest CPU inference
+
+# ── NLP fallback local model: GPU if available, otherwise CPU ──
+if torch.cuda.is_available():
+    DEVICE = "cuda"
+    TORCH_DTYPE = torch.float16
+    HF_DEVICE = 0
+    gpu_name = torch.cuda.get_device_name(0)
+    EXEC_MODE_STR = f"Hybrid Mode [Whisper=CPU | NLP Engine=Llama 3.3 70B | GPU={gpu_name}]"
+else:
+    DEVICE = "cpu"
+    TORCH_DTYPE = torch.float32
+    HF_DEVICE = -1
+    EXEC_MODE_STR = "Hybrid Mode [Whisper=CPU | NLP Engine=Llama 3.3 70B | Local CPU]"
+
+
+# ==========================
+# Whisper Settings
+# ==========================
+
+WHISPER_MODEL = "base"
+
+# ==========================
+# NLP Engine Model Settings
+# ==========================
+
+# Load .env file if available
+ENV_FILE = PROJECT_ROOT / ".env"
+if ENV_FILE.exists():
+    with open(ENV_FILE, "r", encoding="utf-8") as f:
+        for line in f:
+            line = line.strip()
+            if line and not line.startswith("#") and "=" in line:
+                key, value = line.split("=", 1)
+                os.environ[key.strip()] = value.strip().strip('"\' ')  # .env always wins over system env
+
+# Master Model Service Disable Toggle
+DISABLE_CLOUD_API = os.environ.get("DISABLE_CLOUD_API", "false").lower() in {"true", "1", "yes"}
+
+# Primary Integrated Model (Llama 3.3 70B)
+GROQ_API_KEY = os.environ.get("GROQ_API_KEY", "").strip()
+GROQ_MODEL = os.environ.get("GROQ_MODEL", "llama-3.3-70b-versatile").strip()
+USE_GROQ_API = not DISABLE_CLOUD_API and bool(GROQ_API_KEY) and GROQ_API_KEY not in {"your-groq-api-key-here", ""}
+
+# Secondary Integrated Model (Gemini 3.6 Flash)
+GEMINI_API_KEY = os.environ.get("GEMINI_API_KEY", "").strip()
+GEMINI_MODEL = os.environ.get("GEMINI_MODEL", "gemini-3.6-flash").strip()
+USE_GEMINI_API = not DISABLE_CLOUD_API and bool(GEMINI_API_KEY) and GEMINI_API_KEY not in {"your-gemini-api-key-here", ""}
+
+# Fallback Integrated Model (GPT-4o Mini)
+OPENAI_API_KEY = os.environ.get("OPENAI_API_KEY", "").strip()
+OPENAI_MODEL = os.environ.get("OPENAI_MODEL", "gpt-4o-mini").strip()
+USE_OPENAI_API = not DISABLE_CLOUD_API and bool(OPENAI_API_KEY) and OPENAI_API_KEY not in {"your-openai-api-key-here", ""}
+
+USE_CLOUD_API = USE_GROQ_API or USE_GEMINI_API or USE_OPENAI_API
+
+SUMMARIZER_MODEL = "Falconsai/text_summarization"
+
+# Lightweight 0.5B Instruct model optimized for low RAM / system stability (Local Fallback)
+ACTION_MODEL = "Qwen/Qwen2.5-0.5B-Instruct"
+
+
+TOPICS_FOLDER = (
+    PROCESSED_DATASET /
+    "topics"
+)
+
+SUMMARY_FOLDER = PROCESSED_DATASET / "summary"
+
+DECISIONS_FOLDER = PROCESSED_DATASET / "decisions"
+
+FUTURE_TOPICS_FOLDER = PROCESSED_DATASET / "future_topics"
+
+OPEN_QUESTIONS_FOLDER = PROCESSED_DATASET / "open_questions"
+
+KEY_INSIGHTS_FOLDER = PROCESSED_DATASET / "key_insights"
+
+KEY_DISCUSSION_FOLDER = PROCESSED_DATASET / "key_discussion"
+
+NEXT_STEPS_FOLDER = PROCESSED_DATASET / "next_steps"
+
+REPORT_FOLDER = PROCESSED_DATASET / "reports"
+
+PDF_REPORT_FOLDER = PROCESSED_DATASET / "pdf_reports"
+
+PDF_REPORT_FOLDER.mkdir(
+    parents=True,
+    exist_ok=True,
+)
+
+print(f"[MeetingMind AI] Execution Mode: {EXEC_MODE_STR}")
+if USE_GROQ_API:
+    print(f"[MeetingMind AI] NLP Engine    : Llama 3.3 70B Model ({GROQ_MODEL})")
+    if USE_GEMINI_API:
+        print(f"[MeetingMind AI] NLP Fallback  : Gemini 3.6 Flash Model ({GEMINI_MODEL})")
+    elif USE_OPENAI_API:
+        print(f"[MeetingMind AI] NLP Fallback  : GPT-4o Mini Model ({OPENAI_MODEL})")
+elif USE_GEMINI_API:
+    print(f"[MeetingMind AI] NLP Engine    : Gemini 3.6 Flash Model ({GEMINI_MODEL})")
+    if USE_OPENAI_API:
+        print(f"[MeetingMind AI] NLP Fallback  : GPT-4o Mini Model ({OPENAI_MODEL})")
+elif USE_OPENAI_API:
+    print(f"[MeetingMind AI] NLP Engine    : GPT-4o Mini Model ({OPENAI_MODEL})")
+else:
+    print(f"[MeetingMind AI] NLP Engine    : Local PyTorch Model ({ACTION_MODEL})")

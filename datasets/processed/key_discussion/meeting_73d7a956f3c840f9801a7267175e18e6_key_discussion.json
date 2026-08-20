@@ -1,0 +1,32 @@
+[
+    {
+        "topic": "Sustainability and ESG",
+        "points": [
+            {
+                "timestamp": "00:32",
+                "type": "Fact",
+                "text": "The discussion is a sustainability pitch, focusing on the main aim of sustainability and its three pillars: Environment, Social, and Governance (E-S-E)."
+            }
+        ]
+    },
+    {
+        "topic": "Environmental Impact and Governance",
+        "points": [
+            {
+                "timestamp": "02:44",
+                "type": "Fact",
+                "text": "The average global temperature should not increase by more than 2.5 degrees, as per the Paris agreement, and countries have set targets to achieve this goal."
+            }
+        ]
+    },
+    {
+        "topic": "Business Strategy and ESG Implementation",
+        "points": [
+            {
+                "timestamp": "13:34",
+                "type": "Opinion",
+                "text": "The speaker thinks that in the next 3-6 months, they can develop an initial version of ESG products, and they need to research and analyze market trends to guide this development."
+            }
+        ]
+    }
+]

@@ -1,0 +1,97 @@
+[
+    {
+        "topic": "Childhood and Family Influence",
+        "points": [
+            {
+                "timestamp": "00:28",
+                "type": "Fact",
+                "text": "Studies show that how we were loved or unloved between the ages of 0 to 5 impact the next 15, 25, 50 years of our life."
+            },
+            {
+                "timestamp": "01:13",
+                "type": "Fact",
+                "text": "The speaker's parents, a comedian and a photographer, were always home with their children."
+            },
+            {
+                "timestamp": "01:25",
+                "type": "Opinion",
+                "text": "The speaker feels that their family foundation was solid, which is why they dream of having kids and being a present dad."
+            },
+            {
+                "timestamp": "01:42",
+                "type": "Fact",
+                "text": "The speaker's dad, as a comedian, has a volatile job with extreme highs and lows, but the children never saw that side of him."
+            },
+            {
+                "timestamp": "02:07",
+                "type": "Opinion",
+                "text": "The speaker feels connected and safe within their family unit due to their parents being a solid team."
+            }
+        ]
+    },
+    {
+        "topic": "Dealing with Criticism and Challenges",
+        "points": [
+            {
+                "timestamp": "03:30",
+                "type": "Fact",
+                "text": "The critics hated the speaker's show, \"The Crowded Room\", but it doesn't upset them."
+            },
+            {
+                "timestamp": "03:41",
+                "type": "Opinion",
+                "text": "The speaker thinks their ability to handle criticism comes from their dad, who can brush off a bad gig and move on."
+            },
+            {
+                "timestamp": "05:15",
+                "type": "Concern",
+                "text": "Getting bad reviews and perceptions can affect people, and the speaker's ability to shrug it off is seen as amazing."
+            },
+            {
+                "timestamp": "05:47",
+                "type": "Concern",
+                "text": "Many people are scared of what others will say, which holds them back from chasing their dreams."
+            }
+        ]
+    },
+    {
+        "topic": "Personal Growth and Resilience",
+        "points": [
+            {
+                "timestamp": "02:51",
+                "type": "Fact",
+                "text": "The speaker's parents have opened up about the challenges they faced as the children grew older."
+            },
+            {
+                "timestamp": "03:22",
+                "type": "Opinion",
+                "text": "The speaker's dad is good at handling the effects of his job, which has influenced the speaker's own ability to handle challenges."
+            },
+            {
+                "timestamp": "06:24",
+                "type": "Opinion",
+                "text": "The speaker thinks that dealing with criticism and challenges is something you can get better at, and having a strong support group helps."
+            }
+        ]
+    },
+    {
+        "topic": "Interests and Relaxation",
+        "points": [
+            {
+                "timestamp": "04:06",
+                "type": "Opinion",
+                "text": "The speaker loves shows with mystery and puzzles, such as Christopher Nolan movies."
+            },
+            {
+                "timestamp": "04:27",
+                "type": "Fact",
+                "text": "The speaker watches Chris Ramsey's videos to relax, as he solves puzzles and opens Japanese puzzle boxes."
+            },
+            {
+                "timestamp": "05:00",
+                "type": "Fact",
+                "text": "The speaker is not good at solving puzzles, but enjoys watching others do it."
+            }
+        ]
+    }
+]

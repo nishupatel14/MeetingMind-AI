@@ -1,0 +1,3 @@
+========== KEY DECISIONS ==========
+
+• Implementing a new AI data scrubbing team for better accuracy and efficiency will be crucial given the increasing volume of sensitive data being processed. This initiative aligns closely with the organization’s commitment to maintaining high standards of confidentiality and integrity. By establishing this dedicated team early in the year, we aim to enhance operational effectiveness while ensuring compliance with regulatory mandates.

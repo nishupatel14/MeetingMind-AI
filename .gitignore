@@ -1,0 +1,29 @@
+# Environments
+.venv/
+env/
+venv/
+ENV/
+
+# Python cache
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Environment variables & API keys
+.env
+
+# Large log files & temporary outputs
+*.log
+tmp/
+uploads/
+
+# Audio datasets & raw media files
+datasets/raw/
+datasets/processed/wav/
+datasets/processed/pdf_reports/
+models/
+
+# OS / IDE files
+.DS_Store
+.vscode/
+.idea/

@@ -1,0 +1,11 @@
+flask
+faster-whisper
+torch
+transformers
+av
+reportlab
+colorlog
+
+
+# step 1 - .\.venv\Scripts\Activate.ps1
+# step 2 - python app.py

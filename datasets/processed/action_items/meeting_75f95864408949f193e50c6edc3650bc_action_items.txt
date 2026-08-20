@@ -1,0 +1,9 @@
+========== ACTION ITEMS ==========
+
+1.
+  Owner: The team
+  Task: Schedule a brainstorming session for potential guest comedians interested in joining the comedy series.
+  Deadline: Not specified
+  Priority: Medium
+  Context: To identify suitable guests based on shared interests and availability during the upcoming season.
+

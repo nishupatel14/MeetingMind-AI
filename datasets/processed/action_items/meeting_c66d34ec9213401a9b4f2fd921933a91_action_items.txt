@@ -1,0 +1,30 @@
+========== ACTION ITEMS ==========
+
+1.
+  Owner: Chris
+  Task: Update Minutes Document
+  Deadline: Not specified
+  Priority: Medium
+  Context: To update all previous minutes documents with new content relevant to current discussions.
+
+2.
+  Owner: Chris
+  Task: Conduct Pre-Investigation Team Meeting
+  Deadline: Not specified
+  Priority: High
+  Context: To gather initial insights before initiating any investigation procedures.
+
+3.
+  Owner: Chris
+  Task: Implement Change Control Process
+  Deadline: Not specified
+  Priority: Medium
+  Context: To streamline change requests through established processes.
+
+4.
+  Owner: Chris
+  Task: Schedule Next Business Briefing
+  Deadline: Not specified
+  Priority: Low
+  Context: To review progress against key objectives and set next steps for ongoing projects.
+

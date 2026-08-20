@@ -1,0 +1,18 @@
+========== ACTION ITEMS ==========
+
+1.
+Person:
+Task:
+Deadline:
+Don: Document: Version to mimic current practices
+- Document: Escalate and respond within specified timeframe
+- Document: Manage desktop setup and endpoint management
+- Document: Manage cloud services and EDR
+- Document: Respond to sensitive data breaches
+- Document: Investigate potential cloud-based data leaks
+- Document: Investigate potential cloud-based data leaks
+- Document: Investigate potential cloud-based data leaks
+- Document: Investigate potential cloud-based data leaks
+- Document: Investigate potential cloud-based data leaks
+- Document: Investigate potential cloud-based
+

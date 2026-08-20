@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Meeting Analysis Report</title>
+
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='css/result.css') }}">
+
+</head>
+
+<body>
+
+<div class="result-container">
+
+    <div class="result-header">
+        <h1>📊 Enterprise Meeting Analysis Report</h1>
+        <p class="subtitle">Report ID: {{ report_id }}</p>
+    </div>
+
+    <!-- Meeting Metadata Grid -->
+    <div class="info-card">
+        <h2>Meeting Information</h2>
+        <div class="info-grid">
+            <div class="info-item">
+                <span class="info-label">Meeting ID</span>
+                <span class="info-value">{{ metadata.get("meeting_id", report_id) }}</span>
+            </div>
+            <div class="info-item">
+                <span class="info-label">Language</span>
+                <span class="info-value">{{ metadata.get("language", "English") }}</span>
+            </div>
+            <div class="info-item">
+                <span class="info-label">Duration</span>
+                <span class="info-value">{{ metadata.get("duration_minutes", "N/A") }}</span>
+            </div>
+            <div class="info-item">
+                <span class="info-label">Total Words</span>
+                <span class="info-value">{{ metadata.get("word_count", "N/A") }}</span>
+            </div>
+            <div class="info-item">
+                <span class="info-label">Total Sentences</span>
+                <span class="info-value">{{ metadata.get("sentence_count", "N/A") }}</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Executive Summary -->
+    <div class="result-card">
+        <h2>📄 Executive Summary</h2>
+        <div class="summary-box">
+            {{ summary }}
+        </div>
+    </div>
+
+    <!-- Main Topics Discussed (Grouped with Title & One-Line Explanation) -->
+    <div class="result-card">
+        <h2>🎯 Main Topics Discussed</h2>
+        <div class="topics-group-container">
+            {% if topics is iterable and topics is not string %}
+                {% for topic in topics %}
+                    {% if topic is mapping %}
+                        <div class="topic-block">
+                            <h3 class="topic-title-head">
+                                🔹 {{ loop.index }}. {{ topic.title }}
+                            </h3>
+                            {% if topic.details and topic.details|length > 0 %}
+                                <p class="topic-detail-text">• {{ topic.details[0] }}</p>
+                            {% endif %}
+                        </div>
+                    {% else %}
+                        {% set clean_topic = topic | replace("•", "") | replace("**", "") | trim %}
+                        {% if clean_topic %}
+                            {% if " - " in clean_topic %}
+                                {% set parts = clean_topic.split(" - ", 1) %}
+                                <div class="topic-block">
+                                    <h3 class="topic-title-head">🔹 {{ parts[0] }}</h3>
+                                    <p class="topic-detail-text">• {{ parts[1] }}</p>
+                                </div>
+                            {% else %}
+                                <div class="topic-block">
+                                    <h3 class="topic-title-head">🔹 {{ clean_topic }}</h3>
+                                </div>
+                            {% endif %}
+                        {% endif %}
+                    {% endif %}
+                {% endfor %}
+            {% else %}
+                <p class="topic-detail-text">{{ topics }}</p>
+            {% endif %}
+        </div>
+    </div>
+
+    <!-- Key Discussion (Timestamps, Facts, Concerns, Opinions - MAX 2-3 Discussions) -->
+    {% if key_discussion %}
+    <div class="result-card">
+        <h2>🗣️ Key Discussion (Timestamps & Insights)</h2>
+        <div class="key-discussion-container">
+            {% for group in key_discussion[:3] %}
+                <div class="topic-discussion-block">
+                    <h3 class="discussion-topic-title">
+                        📌 {{ group.topic }}
+                    </h3>
+                    <ul class="line-list" style="padding-left: 4px; list-style: none;">
+                        {% for item in group.points[:1] %}
+                            <li class="discussion-item">
+                                <span class="timestamp-badge">
+                                    ⏱️ {{ item.timestamp }}
+                                </span>
+                                {% if item.type|lower == 'fact' %}
+                                    <span class="tag-badge tag-fact">Fact</span>
+                                {% elif item.type|lower == 'concern' %}
+                                    <span class="tag-badge tag-concern">Concern</span>
+                                {% else %}
+                                    <span class="tag-badge tag-opinion">Opinion</span>
+                                {% endif %}
+                                <span class="discussion-text">{{ item.text }}</span>
+                            </li>
+                        {% endfor %}
+                    </ul>
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+    {% endif %}
+
+    <!-- Action Items -->
+    <div class="result-card">
+        <h2>📌 Action Items</h2>
+        <ul class="line-list">
+            {% if actions is iterable and actions is not string %}
+                {% for action in actions %}
+                    {% if action is mapping %}
+                        <li class="line-item">
+                            <span class="bullet-icon">📋</span>
+                            <div>
+                                <strong class="action-task-title">{{ action.task }}</strong>
+                                <div class="action-meta">
+                                    Owner: <strong>{{ action.owner }}</strong>
+                                    {% if action.deadline and action.deadline.lower() not in ['not specified', 'n/a', 'none', 'unspecified', 'not mentioned', 'no deadline', ''] %}
+                                        | Deadline: <strong>{{ action.deadline }}</strong>
+                                    {% endif %}
+                                    | Priority: <strong>{{ action.priority }}</strong>
+                                </div>
+                                {% if action.context %}
+                                    <div class="action-context">Context: {{ action.context }}</div>
+                                {% endif %}
+                            </div>
+                        </li>
+                    {% else %}
+                        {% set clean_action = action | replace("•", "") | trim %}
+                        {% if clean_action %}
+                            <li class="line-item"><span class="bullet-icon">📋</span> <span class="action-task-title">{{ clean_action }}</span></li>
+                        {% endif %}
+                    {% endif %}
+                {% endfor %}
+            {% else %}
+                <p class="topic-detail-text">{{ actions }}</p>
+            {% endif %}
+        </ul>
+    </div>
+
+
+
+    <!-- Navigation / Action Buttons -->
+    <div class="button-group">
+        <a href="/download/pdf?id={{ report_id }}" class="btn primary-btn">
+            📑 Download PDF Report
+        </a>
+        <a href="/" class="btn secondary-btn">
+            🔄 Analyze Another Meeting
+        </a>
+    </div>
+
+</div>
+
+</body>
+
+</html>

@@ -1,0 +1,44 @@
+========== ACTION ITEMS ==========
+
+1.
+  Owner: Not specified
+  Task: Develop a program plan for ESG
+  Deadline: Not specified
+  Priority: High
+  Context: The discussion emphasizes the need for a program plan to address ESG, highlighting the importance of taking action and providing a clear plan.
+
+2.
+  Owner: Not specified
+  Task: Develop an initial version of ESG in the next 6 months
+  Deadline: Not specified
+  Priority: High
+  Context: The speaker is thinking about developing an initial version of ESG in the next 6 months and needs guidance.
+
+3.
+  Owner: Not specified
+  Task: Create a board for audience and education
+  Deadline: Not specified
+  Priority: Medium
+  Context: The idea of creating a board for education and audience is mentioned as a potential step to take, similar to existing boards like KSU.
+
+4.
+  Owner: Not specified
+  Task: Consult and understand the use cases
+  Deadline: Not specified
+  Priority: Medium
+  Context: The discussion highlights the need for a bigger team to consult and understand the use cases, implying a need for further research and exploration.
+
+5.
+  Owner: Not specified
+  Task: Audit the framework and analyze its feasibility
+  Deadline: Not specified
+  Priority: Medium
+  Context: The speaker wants to know how easy it is to do the framework and if it can be close to like audits they already do.
+
+6.
+  Owner: Not specified
+  Task: Research and go through the market
+  Deadline: Not specified
+  Priority: Medium
+  Context: The speaker has already searched and researched but needs to go through it at the market.
+

@@ -1,0 +1,8 @@
+========== ACTION ITEMS ==========
+
+1.
+  Owner: The team
+  Task: Review and update the company’s IT policy regarding data privacy and security measures.
+  Deadline: Next week
+  Priority: Medium
+
