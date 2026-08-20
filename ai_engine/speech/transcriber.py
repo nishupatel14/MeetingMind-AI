@@ -11,7 +11,13 @@ allowing live transcript updates during long audio files.
 import json
 import time
 
-from ai_engine.config import TRANSCRIPT_FOLDER
+from ai_engine.config import (
+    TRANSCRIPT_FOLDER,
+    WHISPER_BEAM_SIZE,
+    WHISPER_LANGUAGE,
+    WHISPER_VAD_FILTER,
+    WHISPER_MIN_SILENCE_DURATION_MS,
+)
 from ai_engine.speech.whisper_model import WhisperLoader
 
 
@@ -48,19 +54,20 @@ class MeetingTranscriber:
 
         transcript_lines = []
         transcript_json = []
-        detected_lang = "en"
+        detected_lang = WHISPER_LANGUAGE
 
         try:
             # faster-whisper returns a generator — segments stream in real-time
             segments, info = self.model.transcribe(
                 audio_path,
-                language="en",
-                beam_size=1,
-                vad_filter=True,           # Skip silent segments automatically
+                language=WHISPER_LANGUAGE,
+                beam_size=WHISPER_BEAM_SIZE,
+                vad_filter=WHISPER_VAD_FILTER,
                 vad_parameters={
-                    "min_silence_duration_ms": 500,
+                    "min_silence_duration_ms": WHISPER_MIN_SILENCE_DURATION_MS,
                 },
             )
+
 
             detected_lang = info.language if info.language else "en"
 

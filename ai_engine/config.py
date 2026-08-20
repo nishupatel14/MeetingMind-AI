@@ -77,7 +77,6 @@ if torch.cuda.is_available():
     ACTION_MODEL = "Qwen/Qwen2.5-3B-Instruct"
     gpu_name = torch.cuda.get_device_name(0)
     EXEC_MODE_STR = f"Hybrid Architecture [Whisper=GPU ({WHISPER_MODEL} {WHISPER_DEVICE}) | NLP Engine=Qwen 2.5 3B | GPU={gpu_name}]"
-
 else:
     WHISPER_DEVICE = "cpu"
     WHISPER_COMPUTE_TYPE = "int8"
@@ -87,6 +86,16 @@ else:
     HF_DEVICE = -1
     ACTION_MODEL = "Qwen/Qwen2.5-0.5B-Instruct"
     EXEC_MODE_STR = "Hybrid Architecture [Whisper=CPU (small INT8) | Local CPU]"
+
+MODELS_FOLDER = PROJECT_ROOT / "models"
+MODELS_FOLDER.mkdir(parents=True, exist_ok=True)
+
+# Whisper Transcription Settings
+WHISPER_BEAM_SIZE = 1
+WHISPER_LANGUAGE = "en"
+WHISPER_VAD_FILTER = True
+WHISPER_MIN_SILENCE_DURATION_MS = 500
+
 
 
 

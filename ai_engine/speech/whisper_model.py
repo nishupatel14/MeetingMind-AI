@@ -181,6 +181,28 @@ class WhisperLoader:
 
         return WHISPER_DEVICE
 
+    @classmethod
+    def clear_model(cls):
+        """
+        Completely release the cached Whisper model.
+        Useful in notebooks when changing models or GPUs.
+        """
+        if cls._model is not None:
+            print("[WhisperLoader] Releasing Whisper model...")
+            del cls._model
+            cls._model = None
+            cls._device_used = None
+
+        try:
+            import torch
+            if torch.cuda.is_available():
+                torch.cuda.empty_cache()
+                torch.cuda.ipc_collect()
+        except Exception:
+            pass
+
+        print("[WhisperLoader] ✓ Model released")
+
 
 if __name__ == "__main__":
     WhisperLoader.get_model()
