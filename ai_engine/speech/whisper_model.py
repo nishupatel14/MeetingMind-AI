@@ -32,15 +32,30 @@ class WhisperLoader:
             print(f"[WhisperLoader] Compute : {WHISPER_COMPUTE_TYPE}")
             print(f"[WhisperLoader] Threads : {NUM_CORES} CPU cores")
 
-            cls._model = WhisperModel(
-                WHISPER_MODEL,
-                device=WHISPER_DEVICE,
-                compute_type=WHISPER_COMPUTE_TYPE,
-                cpu_threads=NUM_CORES,
-                download_root="./models",
-            )
-            cls._device_used = WHISPER_DEVICE
-            print(f"[WhisperLoader] Loaded faster-whisper successfully on {WHISPER_DEVICE.upper()}")
+            device_idx = 0 if WHISPER_DEVICE == "cuda" else 0
+            try:
+                cls._model = WhisperModel(
+                    WHISPER_MODEL,
+                    device=WHISPER_DEVICE,
+                    device_index=device_idx,
+                    compute_type=WHISPER_COMPUTE_TYPE,
+                    cpu_threads=NUM_CORES,
+                    download_root="./models",
+                )
+                cls._device_used = WHISPER_DEVICE
+                print(f"[WhisperLoader] Loaded faster-whisper successfully on {WHISPER_DEVICE.upper()} (Device {device_idx})")
+            except Exception as err:
+                print(f"[WhisperLoader] Warning: GPU Whisper init failed ({err}). Falling back to CPU...")
+                cls._model = WhisperModel(
+                    "base",
+                    device="cpu",
+                    compute_type="int8",
+                    cpu_threads=NUM_CORES,
+                    download_root="./models",
+                )
+                cls._device_used = "cpu"
+                print("[WhisperLoader] Loaded faster-whisper successfully on CPU fallback")
+
 
         return cls._model
 
