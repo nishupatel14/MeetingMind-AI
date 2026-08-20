@@ -61,6 +61,12 @@ class ActionModelLoader:
 
             target_device = "cuda" if torch.cuda.is_available() else "cpu"
             target_dtype = torch.float16 if target_device == "cuda" else torch.float32
+
+            if torch.cuda.is_available():
+                import gc
+                gc.collect()
+                torch.cuda.empty_cache()
+
             print(f"[ActionModelLoader] Loading Local NLP Model ({ACTION_MODEL}) on {target_device.upper()}...")
             print("=" * 60)
 
@@ -72,8 +78,10 @@ class ActionModelLoader:
             cls._model = AutoModelForCausalLM.from_pretrained(
                 ACTION_MODEL,
                 trust_remote_code=True,
-                dtype=target_dtype,
-            ).to(target_device)
+                device_map="auto" if target_device == "cuda" else None,
+                torch_dtype=target_dtype,
+            )
+
 
             cls._model_name = ACTION_MODEL
 

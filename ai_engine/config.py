@@ -124,11 +124,12 @@ USE_CLOUD_API = USE_GROQ_API or USE_GEMINI_API or USE_OPENAI_API
 
 SUMMARIZER_MODEL = "Falconsai/text_summarization"
 
-# Local NLP Model: Upgraded to Qwen 2.5 7B Instruct on GPU (Kaggle 16GB VRAM), lightweight 0.5B on CPU
+# Local NLP Model: Qwen 2.5 1.5B Instruct on GPU (VRAM optimized), 0.5B on CPU
 if torch.cuda.is_available():
-    ACTION_MODEL = "Qwen/Qwen2.5-7B-Instruct"    # High-level 7B model for Kaggle GPU!
+    ACTION_MODEL = "Qwen/Qwen2.5-1.5B-Instruct"  # Highly intelligent 1.5B Instruct model (fits in GPU VRAM alongside Whisper)
 else:
     ACTION_MODEL = "Qwen/Qwen2.5-0.5B-Instruct"  # Lightweight 0.5B model for CPU
+
 
 
 
