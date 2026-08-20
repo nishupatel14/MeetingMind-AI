@@ -1,9 +1,0 @@
-========== ACTION ITEMS ==========
-
-1.
-Person:
-Task:
-Deadline:
-**Person:** **Samuel**
-**Task:** I appreciate, Brad, for adding this. I probably should add it, but. I had two questions about that one. One is, over what time frame are we looking at? So in theory, this could be the same as the Gilep 14 launch, where we're saying basically since 13.0, what kind of big improvements have we made. Candidly, this is always a little bit tough, and I am not totally sure of all of the kind of the interplay here
-

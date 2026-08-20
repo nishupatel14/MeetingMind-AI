@@ -1,6 +1,0 @@
-========== ACTION ITEMS ==========
-
-1.
-- Sign and half of the bike race collapses
-- Try to encapsulate the idea of moving faster while maintaining safety
-

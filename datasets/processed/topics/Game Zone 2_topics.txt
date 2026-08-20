@@ -1,9 +1,0 @@
-========== DISCUSSION TOPICS ==========
-
-TOPIC: Meeting Discussion Overview
-  - The speaker explained the core motto of sustainability, which focuses on using resources so that future generations can use them with the same ease, and detailed its three pillars of Environment, Social, and Governance, mentioning
-  - Developed countries are allocating separate funding to assist developing and underdeveloped nations so they can meet their environmental targets.
-  - India established a target in 2016 to reduce its non-renewable energy consumption, specifically power generated from coal and gas, by 50% by the year 2030.
-  - Countries collaborating with UN initiatives will introduce mandates, regulations, and plant subsidies across various industrial sectors, requiring companies to comply with environmental standards to retain market share and access funding.
-  - Companies are increasingly required to perform resource accounting and emission reporting on technology, power, GPUs, servers, water, and manpower, with 90% of market companies already submitting these reports to stay tax and regulatory compliant.
-

@@ -1,8 +1,0 @@
-========== KEY DECISIONS ==========
-
-• **Final Decision List:**
-• **Manage is even less descriptive than that.**
-• **The way this is getting built is off of a data model.**
-• **We're separating like presentation layer from data layer.**
-• **It's not going to be as hard to update in the future.**
-• **We need to get it out of two.**

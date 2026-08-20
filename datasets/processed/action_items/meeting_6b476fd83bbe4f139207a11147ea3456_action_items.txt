@@ -1,8 +1,0 @@
-========== ACTION ITEMS ==========
-
-1.
-  Owner: N/A
-  Task: No action items were assigned during this meeting.
-  Deadline: N/A
-  Priority: N/A
-

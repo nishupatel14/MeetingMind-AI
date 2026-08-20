@@ -1,7 +1,0 @@
-========== KEY DECISIONS ==========
-
-• "type": "remediation timeline",
-• "type": "environmental standard check",
-• "context": "To ensure ongoing compliance and addressing issues related to the previous reports'
-• "content and format.",
-• "resolution_type": "Environmental Standard Check Resolution"
