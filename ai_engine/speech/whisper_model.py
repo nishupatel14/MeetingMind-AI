@@ -19,7 +19,12 @@ from ai_engine.config import (
     WHISPER_DEVICE,
     WHISPER_COMPUTE_TYPE,
     NUM_CORES,
+    MODELS_FOLDER,
 )
+try:
+    from ai_engine.config import WHISPER_DEVICE_INDEX
+except ImportError:
+    WHISPER_DEVICE_INDEX = 1
 
 
 class WhisperLoader:
@@ -38,70 +43,36 @@ class WhisperLoader:
         import torch
 
         # ---------------------------------------------------------
-        # Determine device
+        # Determine device & device index
         # ---------------------------------------------------------
 
         device = "cpu"
+        gpu_index = 0
 
         if WHISPER_DEVICE.lower().startswith("cuda"):
-
             if torch.cuda.is_available():
-
                 try:
-                    # Read configured CUDA device.
-                    #
-                    # Examples:
-                    #   WHISPER_DEVICE = "cuda:0"
-                    #   WHISPER_DEVICE = "cuda:1"
-                    #
                     if ":" in WHISPER_DEVICE:
-                        gpu_index = int(
-                            WHISPER_DEVICE.split(":")[1]
-                        )
+                        gpu_index = int(WHISPER_DEVICE.split(":")[1])
                     else:
-                        gpu_index = 0
+                        gpu_index = int(WHISPER_DEVICE_INDEX)
+
 
                     torch.cuda.set_device(gpu_index)
+                    device = "cuda"
 
-                    device = f"cuda:{gpu_index}"
-
-                    print(
-                        f"[WhisperLoader] CUDA device selected: "
-                        f"GPU {gpu_index}"
-                    )
-
-                    print(
-                        f"[WhisperLoader] GPU name: "
-                        f"{torch.cuda.get_device_name(gpu_index)}"
-                    )
-
-                    total_memory = (
-                        torch.cuda.get_device_properties(
-                            gpu_index
-                        ).total_memory
-                        / (1024 ** 3)
-                    )
-
-                    print(
-                        f"[WhisperLoader] GPU VRAM: "
-                        f"{total_memory:.2f} GB"
-                    )
-
+                    print(f"[WhisperLoader] CUDA device selected: device='{device}', device_index={gpu_index}")
+                    print(f"[WhisperLoader] GPU name: {torch.cuda.get_device_name(gpu_index)}")
+                    total_memory = torch.cuda.get_device_properties(gpu_index).total_memory / (1024 ** 3)
+                    print(f"[WhisperLoader] GPU VRAM: {total_memory:.2f} GB")
                 except Exception as err:
-
-                    print(
-                        f"[WhisperLoader] GPU selection failed: {err}"
-                    )
-
+                    print(f"[WhisperLoader] GPU selection failed: {err}")
                     device = "cpu"
-
+                    gpu_index = 0
             else:
-                print(
-                    "[WhisperLoader] CUDA unavailable. "
-                    "Using CPU."
-                )
-
+                print("[WhisperLoader] CUDA unavailable. Using CPU.")
                 device = "cpu"
+                gpu_index = 0
 
         # ---------------------------------------------------------
         # Print configuration
@@ -111,10 +82,11 @@ class WhisperLoader:
         print("[WhisperLoader] Loading faster-whisper")
         print("=" * 60)
 
-        print(f"Model   : {WHISPER_MODEL}")
-        print(f"Device  : {device.upper()}")
-        print(f"Compute : {WHISPER_COMPUTE_TYPE}")
-        print(f"Threads : {NUM_CORES}")
+        print(f"Model        : {WHISPER_MODEL}")
+        print(f"Device       : {device.upper()}")
+        print(f"Device Index : {gpu_index if device == 'cuda' else 'N/A'}")
+        print(f"Compute      : {WHISPER_COMPUTE_TYPE}")
+        print(f"Threads      : {NUM_CORES}")
         print("=" * 60)
 
         # ---------------------------------------------------------
@@ -122,21 +94,18 @@ class WhisperLoader:
         # ---------------------------------------------------------
 
         try:
-
             cls._model = WhisperModel(
                 WHISPER_MODEL,
                 device=device,
+                device_index=gpu_index if device == "cuda" else 0,
                 compute_type=WHISPER_COMPUTE_TYPE,
                 cpu_threads=NUM_CORES,
-                download_root="./models",
+                download_root=str(MODELS_FOLDER),
             )
 
-            cls._device_used = device
+            cls._device_used = f"{device}:{gpu_index}" if device == "cuda" else "cpu"
+            print(f"[WhisperLoader] ✓ Model loaded successfully on {cls._device_used.upper()}")
 
-            print(
-                f"[WhisperLoader] ✓ Model loaded successfully "
-                f"on {device.upper()}"
-            )
 
         except Exception as err:
 
