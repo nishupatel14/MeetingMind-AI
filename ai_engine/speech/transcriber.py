@@ -63,6 +63,8 @@ class MeetingTranscriber:
                 audio_path,
                 language=WHISPER_LANGUAGE,
                 beam_size=WHISPER_BEAM_SIZE,
+                temperature=0.0,
+                condition_on_previous_text=False,
                 vad_filter=WHISPER_VAD_FILTER,
                 vad_parameters={
                     "min_silence_duration_ms": WHISPER_MIN_SILENCE_DURATION_MS,

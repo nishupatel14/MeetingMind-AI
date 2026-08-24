@@ -72,24 +72,28 @@ Key Discussion Points:
     # --------------------------------------------------------
 
     def _group_and_synthesize(self, all_points, keywords_str, transcript):
-        """Group related discussion points into 3-4 major strategic topics with 1 clear summary line."""
+        """Group related discussion points into 2-3 major strategic topics with 2-3 rich bullets each."""
         points_text = "\n".join(f"- {p}" for p in all_points)
 
-        prompt = f"""You are MeetingMind AI, an expert meeting analyst.
+        prompt = f"""You are MeetingMind AI, an expert executive meeting analyst.
 
 Below are key discussion points extracted from a meeting transcript.
 
-Your task: Synthesize and group these points into EXACTLY 3 to 4 MAIN STRATEGIC DISCUSSION TOPICS.
+Your task: Synthesize and group these points into EXACTLY 2 to 3 MAIN DISCUSSION TOPICS.
 
 RULES:
-1. Combine minor sub-points into 3 to 4 broad, professional topic categories.
-2. For each topic, write:
-   TOPIC: [Clear descriptive title - high-level business topic category]
-   EXPLANATION: [Write a complete, detailed 1-2 sentence explanation of WHAT was specifically discussed, proposed, or analyzed during the meeting for this topic. Do NOT write short phrases or 'Topic:' headers.]
-3. Keep each topic focused on major strategic themes only.
-4. Do NOT invent information not present in the discussion points.
-5. Do NOT use markdown formatting (no **, no ###). Plain text only.
-6. Separate each topic with a blank line.
+1. Group discussion into 2 to 3 clear, professional topic names (e.g. 'Data Gathering and Scoping', 'Strategy and Execution').
+2. Under each topic, provide 2 to 3 detailed, substantive bullet points explaining:
+   - Specific methodologies, strategies, or workflows discussed.
+   - Specific names, roles, clients, tools, or target numbers mentioned.
+   - Core insights and rationale behind decisions.
+3. For sub-strategies, use format: [Sub-strategy / Theme]: [Detailed explanation].
+4. Format:
+   TOPIC: [Topic Name]
+   - [Bullet 1 detailed explanation]
+   - [Bullet 2 detailed explanation]
+5. Plain text only. No markdown formatting (no **, no ###).
+6. Base everything 100% on the transcript text.
 
 Discussion Points:
 {points_text}
@@ -104,7 +108,7 @@ Grouped Discussion Topics:
     # --------------------------------------------------------
 
     def _parse_rich_topics(self, raw_output, transcript=""):
-        """Parse LLM output into structured topic dicts (max 4 topics, 1 full explanation each)."""
+        """Parse LLM output into structured topic dicts (2-3 topics, up to 3 bullets each)."""
         topics = []
         current_title = None
         current_details = []
@@ -115,7 +119,7 @@ Grouped Discussion Topics:
                 if current_title and current_details:
                     topics.append({
                         "title": current_title,
-                        "details": current_details[:1]
+                        "details": current_details[:3]
                     })
                     current_title = None
                     current_details = []

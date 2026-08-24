@@ -37,20 +37,23 @@ class FutureTopicsDetector:
         if decisions:
             context_extra += "\nKey Decisions Made:\n" + "\n".join(f"- {d.get('decision', d) if isinstance(d, dict) else d}" for d in decisions)
 
-        prompt = f"""You are MeetingMind AI, an executive meeting analyst.
+        prompt = f"""You are MeetingMind AI, an expert executive meeting analyst.
 
-Review the meeting transcript and context below to identify 2 to 4 SUGGESTED TOPICS FOR FUTURE MEETINGS.
+Review the meeting transcript and context below to identify 3 to 4 SUGGESTED TOPICS FOR FUTURE MEETINGS.
 
-These must be forward-looking items explicitly mentioned or logically implied by unresolved issues, next phases, or follow-ups discussed.
+These must be forward-looking agenda items, follow-up milestones, or strategic priorities discussed or logically required by this meeting.
 
 RULES:
-1. Base future topics ONLY on actual discussion content and open questions from this meeting.
-2. Format EACH item as a concise, professional sentence (12 to 25 words).
-3. Do NOT include bullet symbols or numbers (no •, no 1., no -).
-4. Do NOT use markdown. Plain text sentences only.
-5. Do NOT invent unrelated topics.
+1. Extract 3 to 4 forward-looking future meeting agenda items.
+2. Format each item as a concise, action-oriented phrase (12 to 24 words).
+   Examples:
+   - Finalizing the Investment Roadmap and Product Development Priorities (AI/ML, Cybersecurity, ESG).
+   - Implementing the New Internal System for Tracking Requirements, Discussions, and Updates (CRM/System Integration).
+   - Detailed Execution Strategy for Content Creation and Lead Nurturing Campaigns.
+3. Base them 100% on the transcript text. Do NOT invent outside generic topics.
+4. Plain text only. No markdown formatting.
 
-Transcript portion:
+Transcript:
 {cleaned_transcript[:3000]}
 {context_extra}
 

@@ -65,21 +65,22 @@ Summary:
                     chunk_points.append(summary_part)
             content_to_summarize = "\n".join(chunk_points)
 
-        final_prompt = f"""
-You are MeetingMind AI, an expert executive assistant.
+        final_prompt = f"""You are MeetingMind AI, an expert executive meeting analyst.
 
-Write a concise, professional Executive Summary of the meeting content below.
+Review the meeting transcript content below.
+Identify the 2 to 3 PRIMARY FOCUS AREAS of this meeting.
 
-STRICT FORMAT & LENGTH RULES:
-1. Paragraph 1 (Overview): Write 2 short, high-level sentences stating the primary goal, background context, and main focus of the meeting.
-2. Bullet Points (Key Outcomes): Write 2 to 3 concise bullet points (starting with •) summarizing the primary strategic takeaways, core decisions, and next steps.
-3. Keep the TOTAL length under 120 words.
-4. Base EVERY detail strictly on the provided text. Do NOT invent facts.
+RULES:
+1. Extract EXACTLY 2 to 3 high-level strategic focus areas that capture the true core of this meeting.
+2. Format each area as a clear, professional business phrase (8 to 16 words).
+3. Base EVERY detail 100% on the actual facts, projects, systems, or plans discussed in the text.
+4. Format each point starting with • on a new line.
+5. Plain text only. No conversational preamble.
 
 Meeting Content:
 {content_to_summarize}
 
-Executive Summary:
+Primary Focus Areas:
 """
 
         result = ActionModelLoader.generate(final_prompt)

@@ -90,26 +90,28 @@ Action Items:
 
         print("Creating final action item list...")
 
-        final_prompt = f"""You are MeetingMind AI.
+        final_prompt = f"""You are MeetingMind AI, an expert executive meeting analyst.
 
 Key meeting concepts: {keywords_str}
 
 These candidate action items were extracted from a real spoken meeting.
 
-Create ONE clean, deduplicated action item list.
+Create ONE clean, deduplicated, highly specific action item list.
 
-Rules:
-- Keep ONLY confirmed follow-up tasks.
-- Do NOT include vague discussion points as action items.
-- Merge duplicates.
-- For each action item write:
-  Owner: [Exact name | "The team" | "Not specified"]
-  Task: [Clear task description]
-  Deadline: [If mentioned | "Not specified"]
-  Priority: [High | Medium | Low]
-  Context: [Brief context]
-- Maximum 6 action items.
-- Do NOT use markdown formatting. Plain text only.
+RULES:
+1. Keep ONLY confirmed, actionable tasks, commitments, or follow-up assignments.
+2. For each action item, write EXACTLY in this format:
+   [Number]. [Task / Objective Title] - [Owner / Assignee] ([Role / Department]): [Detailed actionable task description including specific tools, deliverables, collaborators, and timelines].
+
+   Examples:
+   1. Content Styling & Case Studies - Bob (Marketing): Work with the team on content styling; create 1-2 scenarios and provide them to Roshish for feedback.
+   2. Lead Research and Follow-up - Taniya (Sales): Follow up with potential clients (e.g., Fabian) who did not respond to the proposal within 24-48 hours.
+   3. Investment Roadmap Insight - Tanuj: Gather insights on investment plans and value propositions to build an investment roadmap.
+   4. Research Delivery - Team (including Bob, working with Raj and Tahir): Obtain research/information and provide it by Friday or Monday.
+
+3. If no specific owner was mentioned, use 'Team' or 'Assignee (Not specified)'.
+4. Do NOT use markdown formatting (no **). Plain text only.
+5. Maximum 5 highly specific action items.
 
 Candidate Action Items:
 {combined}
