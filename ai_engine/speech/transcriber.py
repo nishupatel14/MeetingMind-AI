@@ -2,7 +2,7 @@
 Speech-to-Text Transcriber
 
 Converts meeting audio into text and JSON transcripts
-using faster-whisper (CTranslate2 engine) on CPU.
+using faster-whisper (CTranslate2 engine) on dedicated GPU.
 
 Faster-whisper yields segments as a streaming generator,
 allowing live transcript updates during long audio files.
@@ -23,12 +23,12 @@ from ai_engine.speech.whisper_model import WhisperLoader
 
 class MeetingTranscriber:
     """
-    Handles speech-to-text transcription using faster-whisper.
+    Handles speech-to-text transcription using faster-whisper on GPU.
     """
 
     def __init__(self):
         """
-        Load faster-whisper model (CPU, INT8).
+        Load faster-whisper model on GPU.
         """
         self.model = WhisperLoader.get_model()
 

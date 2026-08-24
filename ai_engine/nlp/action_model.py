@@ -60,27 +60,25 @@ class ActionModelLoader:
                 print(f"[ActionModelLoader] Switching model from '{cls._model_name}' to '{ACTION_MODEL}'...")
                 cls.unload()
 
-            target_device = "cuda" if torch.cuda.is_available() else "cpu"
-            target_dtype = torch.float16 if target_device == "cuda" else torch.float32
+            # Require GPU — raise immediately if CUDA not available
+            if not torch.cuda.is_available():
+                raise RuntimeError(
+                    "[ActionModelLoader] No CUDA GPU found. "
+                    "MeetingMind AI NLP engine requires a GPU. "
+                    "Please enable GPU in your environment."
+                )
 
-            if torch.cuda.is_available():
-                import gc
-                gc.collect()
-                torch.cuda.empty_cache()
+            import gc
+            gc.collect()
+            torch.cuda.empty_cache()
 
             # ── Direct GPU Loading ─────────────────────────────────────────
-            # Use device_map with explicit "cuda:N" string so HuggingFace
-            # streams weights directly into GPU VRAM — no CPU buffer at all.
-            # This is the correct approach when dedicated GPU VRAM is available.
-            if target_device == "cuda":
-                gpu_index  = int(HF_DEVICE) if isinstance(HF_DEVICE, int) and HF_DEVICE >= 0 else 0
-                gpu_index  = min(gpu_index, torch.cuda.device_count() - 1)
-                device_str = f"cuda:{gpu_index}"
-                # String key forces HF to load ALL layers directly to that GPU
-                device_map_arg = {"": device_str}
-            else:
-                device_str     = "cpu"
-                device_map_arg = None
+            # device_map with explicit "cuda:N" string streams weights
+            # directly into GPU VRAM — no CPU buffer at all.
+            gpu_index  = int(HF_DEVICE) if isinstance(HF_DEVICE, int) and HF_DEVICE >= 0 else 0
+            gpu_index  = min(gpu_index, torch.cuda.device_count() - 1)
+            device_str = f"cuda:{gpu_index}"
+            device_map_arg = {"" : device_str}
 
             print(f"[ActionModelLoader] Loading Local NLP Model ({ACTION_MODEL}) → {device_str} ...")
             print("=" * 60)
@@ -93,8 +91,8 @@ class ActionModelLoader:
             cls._model = AutoModelForCausalLM.from_pretrained(
                 ACTION_MODEL,
                 trust_remote_code=True,
-                device_map=device_map_arg,  # Streams weights directly to GPU VRAM
-                torch_dtype=target_dtype,
+                device_map=device_map_arg,
+                torch_dtype=torch.float16,
             )
 
             cls._model_name = ACTION_MODEL
@@ -474,34 +472,12 @@ class ActionModelLoader:
 
         except (RuntimeError, Exception) as err:
             err_msg = str(err)
-            print(f"[ActionModelLoader] CUDA/Generation Exception: {err_msg}")
-
-            if "cuda" in err_msg.lower() or "timed out" in err_msg.lower() or "out of memory" in err_msg.lower():
-                print("[ActionModelLoader] Windows CUDA TDR timeout detected — automatically switching local model to CPU...")
-                try:
-                    if torch.cuda.is_available():
-                        try:
-                            torch.cuda.empty_cache()
-                        except Exception:
-                            pass
-                    if cls._model is not None:
-                        cls._model = cls._model.to("cpu")
-                        inputs_cpu = cls._tokenizer(text, return_tensors="pt").to("cpu")
-                        pad_id = cls._tokenizer.eos_token_id if cls._tokenizer.eos_token_id is not None else cls._tokenizer.pad_token_id
-                        with torch.no_grad():
-                            outputs = cls._model.generate(
-                                **inputs_cpu,
-                                max_new_tokens=256,
-                                do_sample=False,
-                                repetition_penalty=1.2,
-                                pad_token_id=pad_id,
-                            )
-                            generated = outputs[0][inputs_cpu["input_ids"].shape[1]:]
-                            return cls._clean_output(cls._tokenizer.decode(generated, skip_special_tokens=True))
-                except Exception as cpu_err:
-                    print(f"[ActionModelLoader] CPU fallback exception: {cpu_err}")
-
-            return "Information extracted based on meeting transcript context."
+            print(f"[ActionModelLoader] GPU Generation Error: {err_msg}")
+            torch.cuda.empty_cache()
+            raise RuntimeError(
+                f"[ActionModelLoader] NLP generation failed on GPU. "
+                f"Error: {err_msg}"
+            )
 
 
 if __name__ == "__main__":

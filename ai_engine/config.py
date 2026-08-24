@@ -35,11 +35,11 @@ MIN_DURATION_SECONDS = 10
 MAX_DURATION_SECONDS = 3 * 60 * 60
 
 # ==========================
-# Hybrid Device Configuration
+# GPU Architecture Configuration
 # ─────────────────────────────────────────────────────
-# Whisper  : faster-whisper on CPU (multi-threaded, no VRAM used)
-# NLP      : Llama 3.3 70B / Gemini 3.6 Flash / Qwen 2.5 local model
-# Converter: Native ffmpeg CLI (2–3 seconds for any file size)
+# Whisper  : faster-whisper on dedicated GPU VRAM
+# NLP      : Local GPU Model / Integrated Pipeline Models
+# Converter: Native ffmpeg CLI
 # ==========================
 
 import os
@@ -66,28 +66,29 @@ torch.set_num_threads(NUM_CORES)
 os.environ["OMP_NUM_THREADS"] = str(NUM_CORES)
 os.environ["MKL_NUM_THREADS"] = str(NUM_CORES)
 
-# ── Hybrid Architecture Device Settings ──
+# ── Pure GPU Architecture Device Settings ──
 if torch.cuda.is_available():
     DEVICE = "cuda"
     TORCH_DTYPE = torch.float16
     HF_DEVICE = 0
     WHISPER_DEVICE = "cuda"
-    WHISPER_DEVICE_INDEX = 1
-    WHISPER_COMPUTE_TYPE = "float16"
-    WHISPER_MODEL = "large-v3-turbo"
-    ACTION_MODEL = "Qwen/Qwen2.5-3B-Instruct"
-    gpu_name = torch.cuda.get_device_name(0)
-    EXEC_MODE_STR = f"Hybrid Architecture [Whisper=GPU ({WHISPER_MODEL} device=cuda device_index=1) | NLP Engine=Qwen 2.5 3B | GPU={gpu_name}]"
-else:
-    WHISPER_DEVICE = "cpu"
     WHISPER_DEVICE_INDEX = 0
-    WHISPER_COMPUTE_TYPE = "int8"
-    WHISPER_MODEL = "small"
-    DEVICE = "cpu"
-    TORCH_DTYPE = torch.float32
-    HF_DEVICE = -1
-    ACTION_MODEL = "Qwen/Qwen2.5-0.5B-Instruct"
-    EXEC_MODE_STR = "Hybrid Architecture [Whisper=CPU (small INT8) | Local CPU]"
+    WHISPER_COMPUTE_TYPE = "float16"
+    WHISPER_MODEL = "large-v3"
+    ACTION_MODEL = "Qwen/Qwen2.5-3B-Instruct"
+    gpu_count = torch.cuda.device_count()
+    gpu_name = torch.cuda.get_device_name(0)
+    EXEC_MODE_STR = f"GPU Dedicated [{gpu_count}x GPU: {gpu_name} | Whisper={WHISPER_MODEL} (cuda:0) | NLP Engine={ACTION_MODEL}]"
+else:
+    DEVICE = "cuda"
+    TORCH_DTYPE = torch.float16
+    HF_DEVICE = 0
+    WHISPER_DEVICE = "cuda"
+    WHISPER_DEVICE_INDEX = 0
+    WHISPER_COMPUTE_TYPE = "float16"
+    WHISPER_MODEL = "large-v3"
+    ACTION_MODEL = "Qwen/Qwen2.5-3B-Instruct"
+    EXEC_MODE_STR = "GPU Mode Configured"
 
 MODELS_FOLDER = PROJECT_ROOT / "models"
 MODELS_FOLDER.mkdir(parents=True, exist_ok=True)
@@ -140,11 +141,8 @@ USE_CLOUD_API = USE_GROQ_API or USE_GEMINI_API or USE_OPENAI_API
 
 SUMMARIZER_MODEL = "Falconsai/text_summarization"
 
-# Local NLP Model: Qwen 2.5 1.5B Instruct on GPU (VRAM optimized), 0.5B on CPU
-if torch.cuda.is_available():
-    ACTION_MODEL = "Qwen/Qwen2.5-1.5B-Instruct"  # Highly intelligent 1.5B Instruct model (fits in GPU VRAM alongside Whisper)
-else:
-    ACTION_MODEL = "Qwen/Qwen2.5-0.5B-Instruct"  # Lightweight 0.5B model for CPU
+# Local NLP Model: Qwen 2.5 3B Instruct on GPU
+ACTION_MODEL = "Qwen/Qwen2.5-3B-Instruct"
 
 
 
