@@ -66,29 +66,39 @@ torch.set_num_threads(NUM_CORES)
 os.environ["OMP_NUM_THREADS"] = str(NUM_CORES)
 os.environ["MKL_NUM_THREADS"] = str(NUM_CORES)
 
-# ── Pure GPU Architecture Device Settings ──
+# ── Dedicated Dual-GPU Architecture Settings ──
 if torch.cuda.is_available():
+    gpu_count = torch.cuda.device_count()
     DEVICE = "cuda"
     TORCH_DTYPE = torch.float16
-    HF_DEVICE = 0
+
+    # GPU 0: Dedicated to Whisper large-v3
     WHISPER_DEVICE = "cuda"
     WHISPER_DEVICE_INDEX = 0
     WHISPER_COMPUTE_TYPE = "float16"
     WHISPER_MODEL = "large-v3"
+
+    # GPU 1: Dedicated to Qwen NLP Engine (if 2 GPUs available, else GPU 0)
+    HF_DEVICE = 1 if gpu_count >= 2 else 0
     ACTION_MODEL = "Qwen/Qwen2.5-3B-Instruct"
-    gpu_count = torch.cuda.device_count()
-    gpu_name = torch.cuda.get_device_name(0)
-    EXEC_MODE_STR = f"GPU Dedicated [{gpu_count}x GPU: {gpu_name} | Whisper={WHISPER_MODEL} (cuda:0) | NLP Engine={ACTION_MODEL}]"
+
+    gpu_0_name = torch.cuda.get_device_name(0)
+    gpu_1_name = torch.cuda.get_device_name(HF_DEVICE)
+    EXEC_MODE_STR = (
+        f"Dedicated Dual-GPU ["
+        f"GPU 0: Whisper {WHISPER_MODEL} ({gpu_0_name}) | "
+        f"GPU {HF_DEVICE}: NLP {ACTION_MODEL} ({gpu_1_name})]"
+    )
 else:
     DEVICE = "cuda"
     TORCH_DTYPE = torch.float16
-    HF_DEVICE = 0
+    HF_DEVICE = 1
     WHISPER_DEVICE = "cuda"
     WHISPER_DEVICE_INDEX = 0
     WHISPER_COMPUTE_TYPE = "float16"
     WHISPER_MODEL = "large-v3"
     ACTION_MODEL = "Qwen/Qwen2.5-3B-Instruct"
-    EXEC_MODE_STR = "GPU Mode Configured"
+    EXEC_MODE_STR = "Dedicated Dual-GPU [GPU 0: Whisper large-v3 | GPU 1: Qwen 2.5 3B]"
 
 MODELS_FOLDER = PROJECT_ROOT / "models"
 MODELS_FOLDER.mkdir(parents=True, exist_ok=True)
