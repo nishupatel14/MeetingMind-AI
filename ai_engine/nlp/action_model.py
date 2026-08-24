@@ -68,20 +68,21 @@ class ActionModelLoader:
                 gc.collect()
                 torch.cuda.empty_cache()
 
-            # Determine exact device to pin model to
-            # HF_DEVICE is an integer (e.g. 0 or 1) — pin entire model to that GPU
-            # This avoids device_map="auto" which can silently fall back to CPU
+            # ── Direct GPU Loading ─────────────────────────────────────────
+            # Use device_map with explicit "cuda:N" string so HuggingFace
+            # streams weights directly into GPU VRAM — no CPU buffer at all.
+            # This is the correct approach when dedicated GPU VRAM is available.
             if target_device == "cuda":
-                gpu_index = int(HF_DEVICE) if isinstance(HF_DEVICE, int) and HF_DEVICE >= 0 else 0
-                # Clamp to available GPU count
-                gpu_index = min(gpu_index, torch.cuda.device_count() - 1)
+                gpu_index  = int(HF_DEVICE) if isinstance(HF_DEVICE, int) and HF_DEVICE >= 0 else 0
+                gpu_index  = min(gpu_index, torch.cuda.device_count() - 1)
                 device_str = f"cuda:{gpu_index}"
-                device_map_arg = {"" : gpu_index}  # Pin entire model to this GPU
+                # String key forces HF to load ALL layers directly to that GPU
+                device_map_arg = {"": device_str}
             else:
-                device_str = "cpu"
+                device_str     = "cpu"
                 device_map_arg = None
 
-            print(f"[ActionModelLoader] Loading Local NLP Model ({ACTION_MODEL}) on {device_str.upper()}...")
+            print(f"[ActionModelLoader] Loading Local NLP Model ({ACTION_MODEL}) → {device_str} ...")
             print("=" * 60)
 
             cls._tokenizer = AutoTokenizer.from_pretrained(
@@ -92,9 +93,8 @@ class ActionModelLoader:
             cls._model = AutoModelForCausalLM.from_pretrained(
                 ACTION_MODEL,
                 trust_remote_code=True,
-                device_map=device_map_arg,
+                device_map=device_map_arg,  # Streams weights directly to GPU VRAM
                 torch_dtype=target_dtype,
-                low_cpu_mem_usage=True,
             )
 
             cls._model_name = ACTION_MODEL
