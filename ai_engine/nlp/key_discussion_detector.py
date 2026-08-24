@@ -58,7 +58,7 @@ class KeyDiscussionDetector:
             return []
 
         words = timestamped_text.split()
-        text_to_analyze = " ".join(words[:3000]) if len(words) > 3000 else timestamped_text
+        text_to_analyze = " ".join(words[:1500]) if len(words) > 1500 else timestamped_text
 
         prompt = f"""You are MeetingMind AI, an executive meeting analyst.
 

@@ -412,6 +412,8 @@ class ActionModelLoader:
         # 4. Local PyTorch Model Fallback
         cls.load()
 
+        os.environ["PYTORCH_CUDA_ALLOC_CONF"] = "expandable_segments:True"
+
         messages = [
             {
                 "role": "system",
@@ -429,11 +431,14 @@ class ActionModelLoader:
             },
             {
                 "role": "user",
-                "content": prompt,
+                "content": cls._truncate_prompt(prompt, max_chars=8000),
             },
         ]
 
         try:
+            if torch.cuda.is_available():
+                torch.cuda.empty_cache()
+
             try:
                 text = cls._tokenizer.apply_chat_template(
                     messages,
@@ -446,6 +451,8 @@ class ActionModelLoader:
             inputs = cls._tokenizer(
                 text,
                 return_tensors="pt",
+                max_length=3500,
+                truncation=True,
             ).to(cls._model.device)
 
             pad_id = cls._tokenizer.eos_token_id if cls._tokenizer.eos_token_id is not None else cls._tokenizer.pad_token_id
@@ -463,10 +470,7 @@ class ActionModelLoader:
                 result = cls._tokenizer.decode(generated, skip_special_tokens=True)
 
                 if torch.cuda.is_available():
-                    try:
-                        torch.cuda.empty_cache()
-                    except Exception:
-                        pass
+                    torch.cuda.empty_cache()
 
                 return cls._clean_output(result)
 
