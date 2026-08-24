@@ -429,11 +429,49 @@ class PDFReportGenerator:
 
         # 4. Action Items Section
         if actions_data:
+            if isinstance(actions_data, str) and actions_data.strip().startswith(("[", "{")):
+                try:
+                    actions_data = json.loads(actions_data)
+                except Exception:
+                    pass
+
+            clean_actions = []
+            if isinstance(actions_data, list):
+                for a in actions_data:
+                    if isinstance(a, str):
+                        s = a.strip()
+                        if s in {"[", "]", "{", "}", ",", ""}:
+                            continue
+                        if s.startswith(('"owner"', '"task"', '"deadline"', '"priority"')):
+                            continue
+                        clean_actions.append(s)
+                    elif isinstance(a, dict):
+                        clean_actions.append(a)
+            else:
+                clean_actions = [actions_data]
+
+            has_real_actions = False
+            for a in clean_actions:
+                if isinstance(a, dict):
+                    task = a.get("task", "")
+                    if task and "no action" not in task.lower() and len(task.split()) >= 3:
+                        has_real_actions = True
+                        break
+                elif isinstance(a, str):
+                    if len(a.split()) >= 3 and "no action" not in a.lower():
+                        has_real_actions = True
+                        break
+
             story.append(self.make_section_header("Action Items"))
             story.append(Spacer(1, 6))
-            for idx, act in enumerate(actions_data[:5], start=1):
-                story.append(self.make_action_card(idx, act))
-                story.append(Spacer(1, 4))
+
+            if has_real_actions:
+                for idx, act in enumerate(clean_actions[:5], start=1):
+                    story.append(self.make_action_card(idx, act))
+                    story.append(Spacer(1, 4))
+            else:
+                story.append(Paragraph("<i>No specific action items or tasks were assigned during this meeting.</i>", self.body_style))
+
             story.append(Spacer(1, 4))
             story.append(HRFlowable(width="100%", thickness=0.5, color=colors.HexColor("#CBD5E1"), spaceAfter=10, spaceBefore=2))
 
