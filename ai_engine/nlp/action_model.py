@@ -18,6 +18,7 @@ from ai_engine.config import (
     ACTION_MODEL,
     DEVICE,
     TORCH_DTYPE,
+    HF_DEVICE,
     USE_GEMINI_API,
     GEMINI_API_KEY,
     GEMINI_MODEL,
@@ -67,7 +68,20 @@ class ActionModelLoader:
                 gc.collect()
                 torch.cuda.empty_cache()
 
-            print(f"[ActionModelLoader] Loading Local NLP Model ({ACTION_MODEL}) on {target_device.upper()}...")
+            # Determine exact device to pin model to
+            # HF_DEVICE is an integer (e.g. 0 or 1) — pin entire model to that GPU
+            # This avoids device_map="auto" which can silently fall back to CPU
+            if target_device == "cuda":
+                gpu_index = int(HF_DEVICE) if isinstance(HF_DEVICE, int) and HF_DEVICE >= 0 else 0
+                # Clamp to available GPU count
+                gpu_index = min(gpu_index, torch.cuda.device_count() - 1)
+                device_str = f"cuda:{gpu_index}"
+                device_map_arg = {"" : gpu_index}  # Pin entire model to this GPU
+            else:
+                device_str = "cpu"
+                device_map_arg = None
+
+            print(f"[ActionModelLoader] Loading Local NLP Model ({ACTION_MODEL}) on {device_str.upper()}...")
             print("=" * 60)
 
             cls._tokenizer = AutoTokenizer.from_pretrained(
@@ -78,15 +92,16 @@ class ActionModelLoader:
             cls._model = AutoModelForCausalLM.from_pretrained(
                 ACTION_MODEL,
                 trust_remote_code=True,
-                device_map="auto" if target_device == "cuda" else None,
+                device_map=device_map_arg,
                 torch_dtype=target_dtype,
+                low_cpu_mem_usage=True,
             )
-
 
             cls._model_name = ACTION_MODEL
 
+            actual_device = str(next(cls._model.parameters()).device)
             print("=" * 60)
-            print(f"Local NLP Model ({ACTION_MODEL}) Loaded Successfully on {target_device.upper()}")
+            print(f"Local NLP Model ({ACTION_MODEL}) Loaded on {actual_device.upper()}")
             print("=" * 60)
 
     # Common LLM noise patterns to strip from output
