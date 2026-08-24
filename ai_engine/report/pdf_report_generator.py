@@ -295,9 +295,44 @@ class PDFReportGenerator:
         return str(output)
 
     def generate(self, output_name="meeting_001"):
+        PDF_REPORT_FOLDER.mkdir(parents=True, exist_ok=True)
+        output = PDF_REPORT_FOLDER / f"{output_name}_report.pdf"
 
+        # Load data from JSON report if available, else load from raw files
+        json_report_file = REPORT_FOLDER / f"{output_name}_report.json"
+        if json_report_file.exists():
+            with open(json_report_file, "r", encoding="utf-8") as f:
+                report_data = json.load(f)
+            metadata = report_data.get("metadata", {})
+            summary_raw = report_data.get("summary", "")
+            topics_data = report_data.get("topics", [])
+            decisions_data = report_data.get("decisions", [])
+            actions_data = report_data.get("action_items", [])
+            key_discussion_data = report_data.get("key_discussion", [])
+        else:
+            metadata = {"duration_minutes": "N/A"}
+            summary_file = SUMMARY_FOLDER / f"{output_name}_summary.txt"
+            summary_raw = summary_file.read_text(encoding="utf-8") if summary_file.exists() else ""
+            topics_data = []
+            decisions_data = []
+            actions_data = []
+            key_discussion_data = []
 
-        duration_val = metadata.get("duration_minutes", "N/A")
+        document = SimpleDocTemplate(
+            str(output),
+            pagesize=letter,
+            leftMargin=36,
+            rightMargin=36,
+            topMargin=36,
+            bottomMargin=36,
+        )
+        story = []
+
+        # Header Title
+        story.append(Paragraph("Executive Meeting Analysis Report", self.title_style))
+        story.append(Spacer(1, 4))
+
+        duration_val = metadata.get("duration_minutes", "N/A") if isinstance(metadata, dict) else "N/A"
         pill_table = Table(
             [[
                 Paragraph(f"<b>Meeting Duration:</b> {html.escape(str(duration_val))}", self.pill_left_style),
