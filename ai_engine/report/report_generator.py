@@ -205,22 +205,34 @@ class ReportGenerator:
             except Exception:
                 pass
 
+        future_topics_file = FUTURE_TOPICS_FOLDER / f"{output_name}_future_topics.txt"
+        future_topics = []
+        if future_topics_file.exists():
+            for line in self.read_file(future_topics_file).splitlines():
+                line = re.sub(r"^[\s•\-\*\d\.]+", "", line).strip()
+                if line and not line.startswith("="):
+                    future_topics.append(line)
+
         metadata = extractor.extract(transcript, meeting_id=output_name)
 
         report_information = {
-            "generated_by": "MeetingMind AI",
+            "generated_by": "Enterprise Briefing AI",
             "version": "2.0",
-            "report_type": "Enterprise Meeting Analysis Report",
+            "report_type": "Refined Meeting Summary",
         }
 
         report = {
             "report_information": report_information,
             "metadata": metadata,
+            "summary": summary,
             "executive_summary": summary,
+            "topics": topics,
             "discussion_topics": topics,
             "key_discussion": key_discussion,
             "key_decisions": decisions,
+            "decisions": decisions,
             "action_items": actions,
+            "future_topics": future_topics,
             "open_questions": [],
         }
 

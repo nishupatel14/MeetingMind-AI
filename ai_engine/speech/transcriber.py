@@ -58,6 +58,7 @@ class MeetingTranscriber:
 
         try:
             # faster-whisper returns a generator — segments stream in real-time
+            # language=None enables auto-detection across Hindi, English, Hinglish
             segments, info = self.model.transcribe(
                 audio_path,
                 language=WHISPER_LANGUAGE,
@@ -66,10 +67,10 @@ class MeetingTranscriber:
                 vad_parameters={
                     "min_silence_duration_ms": WHISPER_MIN_SILENCE_DURATION_MS,
                 },
+                initial_prompt="Meeting discussion with mixed English, Hindi, Hinglish words, names, business tasks, deliverables, and decisions.",
             )
 
-
-            detected_lang = info.language if info.language else "en"
+            detected_lang = info.language if info.language else "auto"
 
             print("=" * 50)
             print(f"Detected language : {detected_lang}")

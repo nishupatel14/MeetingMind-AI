@@ -136,6 +136,25 @@ Final Action Items:
             line = re.sub(r'^\d+[\.\)]\s*', '', line).strip()
             l_lower = line.lower()
 
+            # Single-line format: Task Title - Owner (Role/Dept): Description
+            single_match = re.match(r'^(.*?)\s*-\s*([^:]+):\s*(.*)$', line)
+            if single_match and not l_lower.startswith(("owner:", "task:", "deadline:", "priority:", "context:", "person:")):
+                task_title = single_match.group(1).strip()
+                owner_part = single_match.group(2).strip()
+                desc_part = single_match.group(3).strip()
+                if len(task_title.split()) >= 2 and len(desc_part.split()) >= 3:
+                    if current.get("task"):
+                        actions.append(current)
+                        current = {}
+                    actions.append({
+                        "owner": owner_part,
+                        "task": task_title,
+                        "context": desc_part,
+                        "deadline": "Not specified",
+                        "priority": "High" if ("urgent" in desc_part.lower() or "friday" in desc_part.lower()) else "Medium"
+                    })
+                    continue
+
             if l_lower.startswith("owner:"):
                 if current.get("task"):
                     actions.append(current)

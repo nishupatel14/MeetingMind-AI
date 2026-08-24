@@ -103,9 +103,9 @@ else:
 MODELS_FOLDER = PROJECT_ROOT / "models"
 MODELS_FOLDER.mkdir(parents=True, exist_ok=True)
 
-# Whisper Transcription Settings
-WHISPER_BEAM_SIZE = 1
-WHISPER_LANGUAGE = "en"
+# Whisper Transcription Settings (Multilingual: Hindi, English, Hinglish Auto-Detect)
+WHISPER_BEAM_SIZE = 5
+WHISPER_LANGUAGE = None
 WHISPER_VAD_FILTER = True
 WHISPER_MIN_SILENCE_DURATION_MS = 500
 
