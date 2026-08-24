@@ -51,6 +51,25 @@ class ReportGenerator:
         if not raw_topics:
             return []
 
+        # If already JSON, load directly
+        if isinstance(raw_topics, str) and raw_topics.strip().startswith(("[", "{")):
+            try:
+                parsed = json.loads(raw_topics)
+                if isinstance(parsed, list) and parsed:
+                    res = []
+                    for item in parsed:
+                        if isinstance(item, dict):
+                            res.append(item)
+                        elif isinstance(item, str) and " - " in item:
+                            parts = item.split(" - ", 1)
+                            res.append({"title": parts[0].strip(), "details": [parts[1].strip()]})
+                        elif isinstance(item, str):
+                            res.append({"title": item.strip(), "details": []})
+                    if res:
+                        return res
+            except Exception:
+                pass
+
         topics = []
         current_title = None
         current_details = []
@@ -98,6 +117,25 @@ class ReportGenerator:
 
     def parse_decisions_file(self, text):
         """Parse decisions into structured list of dicts."""
+        if not text:
+            return []
+
+        # If already JSON, load directly
+        if isinstance(text, str) and text.strip().startswith(("[", "{")):
+            try:
+                parsed = json.loads(text)
+                if isinstance(parsed, list) and parsed:
+                    res = []
+                    for item in parsed:
+                        if isinstance(item, dict):
+                            res.append(item)
+                        elif isinstance(item, str):
+                            res.append({"decision": item.strip(), "context": "", "responsible": "Not specified"})
+                    if res:
+                        return res
+            except Exception:
+                pass
+
         decisions = []
         current = {}
         for line in text.splitlines():
@@ -130,6 +168,35 @@ class ReportGenerator:
 
     def parse_actions_file(self, text):
         """Parse action items into structured list of dicts."""
+        if not text:
+            return []
+
+        # If already JSON, load directly
+        if isinstance(text, str) and text.strip().startswith(("[", "{")):
+            try:
+                parsed = json.loads(text)
+                if isinstance(parsed, list) and parsed:
+                    res = []
+                    for item in parsed:
+                        if isinstance(item, dict):
+                            res.append(item)
+                        elif isinstance(item, str):
+                            single_m = re.match(r'^(.*?)\s*-\s*([^:]+):\s*(.*)$', item)
+                            if single_m:
+                                res.append({
+                                    "owner": single_m.group(2).strip(),
+                                    "task": single_m.group(1).strip(),
+                                    "context": single_m.group(3).strip(),
+                                    "deadline": "Not specified",
+                                    "priority": "Medium"
+                                })
+                            else:
+                                res.append({"owner": "Not specified", "task": item.strip(), "deadline": "Not specified", "priority": "Medium", "context": ""})
+                    if res:
+                        return res
+            except Exception:
+                pass
+
         actions = []
         current = {}
         for line in text.splitlines():
@@ -138,6 +205,20 @@ class ReportGenerator:
                 if current.get("task"):
                     actions.append(current)
                     current = {}
+                continue
+
+            single_m = re.match(r'^(.*?)\s*-\s*([^:]+):\s*(.*)$', line)
+            if single_m and not line.lower().startswith(("owner:", "task:", "deadline:", "priority:", "context:")):
+                if current.get("task"):
+                    actions.append(current)
+                    current = {}
+                actions.append({
+                    "owner": single_m.group(2).strip(),
+                    "task": single_m.group(1).strip(),
+                    "context": single_m.group(3).strip(),
+                    "deadline": "Not specified",
+                    "priority": "Medium"
+                })
                 continue
 
             l_clean = re.sub(r'^\d+[\.\)]\s*', '', line).strip()
