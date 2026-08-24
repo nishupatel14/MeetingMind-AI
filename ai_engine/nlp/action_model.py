@@ -407,6 +407,7 @@ class ActionModelLoader:
         # 4. Local PyTorch Model Fallback
         cls.load()
 
+        import os
         os.environ["PYTORCH_CUDA_ALLOC_CONF"] = "expandable_segments:True"
 
         messages = [
